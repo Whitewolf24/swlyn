@@ -265,7 +265,11 @@ else if (goog) {
   window.addEventListener("resize", function () {
     current_width = window.innerWidth;
 
-    if (current_width >= 900) {
+    if (current_width >= 2210) {
+      video_container.style.left = "4vw";
+    }
+
+    if (current_width >= 900 && !(current_width >= 2210)) {
       video_container.style.left = "10vw";
       video_container.style.width = "100vw";
     }
@@ -288,7 +292,11 @@ else if (goog) {
   window.addEventListener("load", function () {
     current_width = window.innerWidth;
 
-    if (current_width >= 900) {
+    if (current_width >= 2210) {
+      video_container.style.left = "4vw";
+    }
+
+    if (current_width >= 900 && !(current_width >= 2210)) {
       video_container.style.left = "10vw";
       video_container.style.width = "100vw";
     }
