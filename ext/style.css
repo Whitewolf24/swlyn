@@ -688,7 +688,7 @@ nav li {
 
 /* -------------------------------------------- */
 
-/*  6. media */
+/*  6.media */
 
 @media only screen and (max-width: 1184px) and (min-width: 890px) {
   #video_container {
@@ -696,17 +696,17 @@ nav li {
   }
 }
 
-@media only screen and (max-width: 890px) and (min-width: 717px) {
+@media only screen and (max-width: 890px) and (min-width: 720px) {
   #video_container {
     left: 12rem;
     width: 76vw;
   }
 }
 
-@media only screen and (max-width: 717px) {
+@media only screen and (max-width: 720px) {
   #video_container {
     left: 17vw;
-    width: 76vw ;
+    width: 76vw;
   }
 }
 
