@@ -180,8 +180,15 @@ if (firef) {
   window.addEventListener("resize", function () {
     current_width = window.innerWidth;
 
-    if (current_width >= 900) {
+    if (current_width >= 1087) {
       video_container.style.marginLeft = "0.5rem";
+      video_container.style.left = "7rem";
+      //video_container.style.width = "93vw";
+    }
+
+    if (current_width >= 724) {
+      video_container.style.marginLeft = "0.5rem";
+      video_container.style.left = "24vw";
       //video_container.style.width = "93vw";
     }
 
@@ -219,7 +226,7 @@ else if (goog) {
     video_container.style.width = "100vw";
   }
 
-  else if (current_width > 623) {
+  if (current_width > 623) {
     video_container.style.left = "20vw";
   }
 
