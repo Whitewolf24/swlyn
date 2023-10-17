@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name=" referrer" content="strict-origin-when-cross-origin" /> <!-- μην στέλνεις data σε HTTP -->
+    <meta name="color-scheme" content="light dark" />
+    <meta name="google" content="notranslate" />
+    <meta name="googlebot-news" content="noindex,nofollow" />
+    <meta name="googlebot" content="noindex,nofollow" />
+    <meta name="robots" content="noindex,nofollow" /> <!--  τα bots να μην δείχνουν το index στις αναζητήσεις -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="author" content="George Marinos" />
+    <meta name="description" content="ΣΩΛΗΝ" />
+    <title>ΣΩΛΗΝ</title>
+    <link rel="icon" type="image/icon" sizes="64x64" href="ext/img/favicon.ico" />
+    <link rel="stylesheet" href="ext/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li data-tip="Μενού" id="burger_li" draggable="false" tabindex=-1 id="burger_li"
+                    style="cursor: pointer;"> <img src="ext\img\burger.png" alt="Μενού" aria-label="Μενού" tabindex=0
+                        id="burger_butt" class="transparent_pic">
+                </li>
+                <div id="logo_li">
+                    <h1 id="logo" tabindex=0>
+                        <a href="#" draggable="false" target="_self" tabindex=-1>
+                            ΣΩΛΗΝ
+                        </a>
+                    </h1>
+                </div>
+                <li>
+                    <form id="search_form"> <input type="search" placeholder="Αναζήτηση" aria-label=" Φόρμα Αναζήτησης"
+                            id="search_bar">
+                        <button draggable="false" tabindex=-1 id="search_butt" target="_self"><img
+                                src="ext\img\search.png" alt="Αναζήτηση" aria-label="Αναζήτηση" draggable="false"
+                                tabindex=0 id="search_glass" class="transparent_pic"></button>
+                    </form>
+                </li>
+                <li data-tip="Δημιουργία Βιντεο" draggable="false" id="camera_li" tabindex=-1>
+                    <a href="#" draggable="false" target="_self" tabindex=0><img src="ext\img\camera.png" tabindex=-1
+                            alt="Δημιουργία Βίντεο" aria-label="Δημιουργία Βιντεο" draggable="false" id="camera_butt"
+                            class="transparent_pic camera_hover topbar_ico"> </a>
+                </li>
+
+                <li data-tip="Εφαρμογές" draggable="false" id="dots_li" tabindex=-1><a href="#" draggable="false"
+                        target="_self" tabindex=0><img src="ext\img\apps.png" tabindex=-1 alt="Εφαρμογές"
+                            aria-label="Εφαρμογές" draggable="false" id="dots_butt" class="transparent_pic topbar_ico">
+                    </a> </li>
+                <li data-tip="Ειδο/σεις" draggable="false" id="bell_li" tabindex=-1><a href="#" target="_self"
+                        tabindex=0>
+                        <img src="ext\img\bell.png" tabindex=-1 alt="Ειδοποιήσεις" aria-label="Ειδοποιήσεις"
+                            draggable="false" id="bell_butt" class="transparent_pic topbar_ico"></a>
+                </li>
+
+                <li draggable="false" id="profile_li" tabindex=-1> <img src="ext\img\profile.png" tabindex=0
+                        alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
+                        class="transparent_pic topbar_ico" style="cursor: pointer;">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--  -->
+
+    <div id="sidebar_left_container">
+        <ul id="sidebar_left">
+            <li tabindex=0 draggable="false" con><a href="#" draggable="false" target="_self" tabindex=-1
+                    id="explore_li" class="side_li">
+                    <img tabindex=-1 src="ext\img\explore.png" draggable="false" class="transparent_pic side_img">
+                    <p tabindex=-1 id="explore_txt" class="side_text">Εξερεύνηση</p>
+                </a></li>
+            <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="subs_li"
+                    class="side_li">
+                    <img src="ext\img\subs.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <p tabindex=-1 id="subs_txt" class="side_text">Εγγραφές</p>
+                </a></li>
+            <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="library_li"
+                    class="side_li">
+                    <img src="ext\img\library.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <p tabindex=-1 id="library_txt" class="side_text">Βιβλιοθήκη</p>
+                </a></li>
+            <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="history_li"
+                    class="side_li">
+                    <img src="ext\img\history.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <p tabindex=-1 id="history_txt" class="side_text"> Ιστορικό</p>
+                </a></li>
+            <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="vid_li"
+                    class="side_li">
+                    <img src="ext\img\yourvids.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <p tabindex=-1 id="vid_txt" class="side_text">Τα Βίντεό σας</p>
+                </a></li>
+            <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="later_li"
+                    class="side_li">
+                    <img src="ext\img\later.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <p tabindex=-1 id="later_txt" class="side_text">Δείτε Αργότερα</p>
+                </a></li>
+            <li tabindex=0 id="like_li" draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1
+                    class="side_li">
+                    <img src="ext\img\liked.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <p tabindex=-1 id="like_txt" class="side_text">Αρεσκόμενα Βίντεο</p>
+            </li>
+            <li tabindex=-1 id="creator_li">
+                <h2 tabindex=-1 id="creator">Δημιουργός<br>Γεώργιος Μαρίνος</h2>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--  -->
+    <div id="sidebar_right_container">
+        <ul id="sidebar_right">
+            <li tabindex=-1 id="channel_li" draggable="false" con><a href="#" draggable="false" target="_self"
+                    tabindex=-1 class="side_li">
+                    <img tabindex=-1 src="ext\img\channel.png" draggable="false" class="transparent_pic side_img">
+                    <p tabindex=0 id="channel_txt" class="side_text_right">Το Προφίλ μου</p>
+                </a></li>
+            <li tabindex=0 id="settings_li" draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1
+                    class="side_li">
+                    <img src="ext\img\settings.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <p tabindex=0 id="settings_txt" class="side_text_right">Ρυθμίσεις</p>
+                </a></li>
+            <li tabindex=0 id="light_li" draggable="false" class="side_li">
+                <img src="ext\img\light.png" draggable="false" tabindex=-1 id="light_butt"
+                    class="transparent_pic side_img">
+                <p tabindex=0 id="light_txt" class="side_text_right">Φωτεινό Θέμα</p>
+            </li>
+            <li tabindex=0 id="dark_li" draggable="false" class="side_li">
+                <img src="ext\img\dark.png" draggable="false" tabindex=-1 id="dark_butt"
+                    class="transparent_pic side_img">
+                <p tabindex=0 id="dark_txt" class="side_text_right">Σκοτεινό Θέμα</p>
+            </li>
+            <li tabindex=-1 id="line_right_1" class="line_right" draggable="false"> </li>
+            <li tabindex=-1 id="line_right_2" class="line_right" draggable="false"> </li>
+            <li tabindex=0 id="el_li" draggable="false" class="side_li">
+                <p tabindex=-1 id="gr_txt" class="side_text_right">Ελληνικά</p>
+            </li>
+            <li tabindex=0 id="eng_li" draggable="false" class="side_li">
+                <p tabindex=-1 id="eng_txt" class="side_text_right">Αγγλικά</p>
+            </li>
+        </ul>
+    </div>
+
+    <!--  -->
+    <main id="video_container">
+        <section role="main" id="main_section">
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=1" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=1"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">4χ θεάσεις • 2 μέρες</p>
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=2" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=2"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">435χ θεάσεις • 6 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=3" draggable="false" tabindex=0
+                            class="video_img video_img_light video_img video_img_light_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=3"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">35ε θεάσεις • 32 λεπτα</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=4" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=4"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">5χ θεάσεις • 8 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=5" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=5"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">3ε θεάσεις • 39 μέρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=6" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=6"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">378 θεάσεις • 2 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=7" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=7"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">78χ θεάσεις • 1 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=8" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=8"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">37 θεάσεις • 24 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=9" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=9"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">98ε θεάσεις • 139 μέρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=10" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=10"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">3 θεάσεις • 9 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=11" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=11"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">74χ θεάσεις • 20 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=12" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=12"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">301ε θεάσεις • 19 μέρες </p>
+                </ul>
+                </div>
+            </article>
+
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=13" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=13"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">435χ θεάσεις • 8 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=14" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=14"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">38ε θεάσεις • 3 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=15" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=15"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">15ε • 1 μέρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=16" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=16"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">943ε θεάσεις • 12 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=17" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=17"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">3χ θεάσεις • 2 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=18" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=18"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta"> 992 θεάσεις • 92 μήνες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=19" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=19"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">942χ θεάσεις • 17 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=20" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=20"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">3 θεάσεις • 10 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=21" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=21"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">387χ θεάσεις • 2 μέρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=22" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=22"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">3 θεάσεις • 12 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=23" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=23"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">14χ θεάσεις • 2 μέρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+            <!--  -->
+            <article class="video_boxes">
+                <ul>
+                    <a href="#" target="_self" tabindex=-1 data-duration="" class="video_time"><img
+                            src="https://picsum.photos/240/140.webp?random=30" draggable="false" tabindex=0
+                            class="video_img video_img_light"></a>
+                    <div class="video_bottom">
+                        <a href="#" target="_self" tabindex=-1><img src="https://picsum.photos/36/36.webp?random=30"
+                                draggable="false" tabindex=0 class="channel_img"></a>
+                        <br>
+                        <a href="#" tabindex=-1>
+                            <p class="video_title" tabindex=0>Τίτλος βίντεο</p>
+                        </a>
+                        <a href="#" tabindex=-1>
+                            <p class="video_channel_name" tabindex=0>Κανάλι</p>
+                        </a>
+                        <p class="video_meta">4ε θεάσεις • 22 ώρες</p>
+
+                </ul>
+                </div>
+            </article>
+
+
+        </section>
+    </main>
+
+</body>
+
+<script src="./ext/js.cookie.js"></script>
+</script>
+
+<script src="./ext/script.js"></script>
+
+</html>
