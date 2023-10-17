@@ -185,11 +185,12 @@ if (firef) {
       //video_container.style.width = "93vw";
     }
 
-    if (current_width < 900) {
+    else if (current_width < 900) {
       video_container.style.marginLeft = "0.1rem";
       // video_container.style.width = "93vw";
-      if (current_width <= 716) {
+      if (current_width <= 720) {
         video_container.style.width = "76vw";
+        video_container.style.left = "35vw";
       }
     }
 
@@ -214,11 +215,11 @@ else if (goog) {
   video_container.style.width = "88vw";
 
   if (current_width >= 900) {
-    //video_container.style.left = "2rem";
+    video_container.style.left = "7rem";
     video_container.style.width = "100vw";
   }
 
-  if (current_width > 623 && !current_width >= 900) {
+  else if (current_width > 623) {
     video_container.style.left = "20vw";
   }
 
