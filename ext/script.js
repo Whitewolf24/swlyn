@@ -139,7 +139,6 @@ else if (document.cookie.length !== 0) {
       speak_eng();
     }
 
-
     else if (lang == "gr") {
 
       document.documentElement.style.setProperty("--time_mleft", "12.4rem");
@@ -153,7 +152,6 @@ else if (document.cookie.length !== 0) {
     }
 
   }
-
 
 }
 
@@ -182,7 +180,7 @@ if (firef) {
 
     if (current_width >= 1087) {
       video_container.style.marginLeft = "0.5rem";
-      video_container.style.left = "-10vw";
+      video_container.style.left = "14vw";
       //video_container.style.width = "93vw";
     }
 
@@ -203,6 +201,32 @@ if (firef) {
 
   });
 
+
+  window.addEventListener("load", function () {
+    current_width = window.innerWidth;
+
+    if (current_width >= 1087) {
+      video_container.style.marginLeft = "0.5rem";
+      video_container.style.left = "14vw";
+      //video_container.style.width = "93vw";
+    }
+
+    if (current_width >= 724) {
+      video_container.style.marginLeft = "0.5rem";
+      video_container.style.left = "24vw";
+      //video_container.style.width = "93vw";
+    }
+
+    else if (current_width < 900) {
+      video_container.style.marginLeft = "0.1rem";
+      // video_container.style.width = "93vw";
+      if (current_width <= 720) {
+        video_container.style.width = "76vw";
+        video_container.style.left = "35vw";
+      }
+    }
+
+  });
 }
 
 
@@ -220,19 +244,6 @@ else if (goog) {
   logo.style.width = "63%";
   //video_container.style.left = "7.5rem";
   video_container.style.width = "88vw";
-
-  if (current_width >= 900) {
-    video_container.style.left = "-10vw";
-    video_container.style.width = "100vw";
-  }
-
-  if (current_width > 623) {
-    video_container.style.left = "20vw";
-  }
-
-  else if (current_width <= 623) {
-    video_container.style.left = "+10vw";
-  }
 
 
   for (left_p = 0; left_p < sidebar_txt.length; left_p++) {
@@ -255,14 +266,46 @@ else if (goog) {
     current_width = window.innerWidth;
 
     if (current_width >= 900) {
-      // video_container.style.left = "2rem";
+      video_container.style.left = "10vw";
       video_container.style.width = "100vw";
-    } else if (current_width < 900) {
+    }
+
+    if (current_width < 900) {
       //video_container.style.left = "7.5rem";
       video_container.style.width = "88vw";
     }
+
+    if (current_width > 623) {
+      video_container.style.left = "20vw";
+    }
+
+    else if (current_width <= 623) {
+      video_container.style.left = "30vw";
+    }
   });
 
+
+  window.addEventListener("load", function () {
+    current_width = window.innerWidth;
+
+    if (current_width >= 900) {
+      video_container.style.left = "10vw";
+      video_container.style.width = "100vw";
+    }
+
+    if (current_width < 900) {
+      //video_container.style.left = "7.5rem";
+      video_container.style.width = "88vw";
+    }
+
+    if (current_width > 623) {
+      video_container.style.left = "20vw";
+    }
+
+    else if (current_width <= 623) {
+      video_container.style.left = "30vw";
+    }
+  });
 }
 
 /* -------------------------------------------- */
