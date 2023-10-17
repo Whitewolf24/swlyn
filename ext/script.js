@@ -214,6 +214,15 @@ else if (goog) {
     video_container.style.width = "100vw";
   }
 
+  if (current_width > 623) {
+    video_container.style.left = "20vw";
+  }
+  
+   if (current_width <= 623) {
+    video_container.style.left = "30vw";
+  }
+
+
   for (left_p = 0; left_p < sidebar_txt.length; left_p++) {
     sidebar_txt[left_p].style.marginTop = "-1.5rem";
     sidebar_txt[left_p].style.fontSize = "0.65rem";
