@@ -105,7 +105,7 @@ if (document.cookie.length === 0) {
     path: ''
   });
 
-  // window.location.reload();
+  window.location.reload();
 
 }
 
@@ -206,11 +206,11 @@ else if (goog) {
   GOO_ico.forEach(widthadjust25);
   logo.style.height = "1.7rem";
   logo.style.width = "63%";
-  video_container.style.left = "7.5rem";
+  //video_container.style.left = "7.5rem";
   video_container.style.width = "88vw";
 
   if (current_width >= 900) {
-    video_container.style.left = "2rem";
+    //video_container.style.left = "2rem";
     video_container.style.width = "100vw";
   }
 
@@ -234,10 +234,10 @@ else if (goog) {
     current_width = window.innerWidth;
 
     if (current_width >= 900) {
-      video_container.style.left = "2rem";
+     // video_container.style.left = "2rem";
       video_container.style.width = "100vw";
     } else if (current_width < 900) {
-      video_container.style.left = "7.5rem";
+      //video_container.style.left = "7.5rem";
       video_container.style.width = "88vw";
     }
   });
