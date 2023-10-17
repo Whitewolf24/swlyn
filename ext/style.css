@@ -699,14 +699,14 @@ nav li {
 @media only screen and (max-width: 890px) and (min-width: 717px) {
   #video_container {
     left: 12rem;
-    width: 76vw !important;
+    width: 76vw;
   }
 }
 
 @media only screen and (max-width: 717px) {
   #video_container {
-    left: 37vw;
-    width: 76vw !important;
+    left: 17vw;
+    width: 76vw ;
   }
 }
 
