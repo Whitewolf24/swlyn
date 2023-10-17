@@ -378,9 +378,9 @@ nav li {
   grid-template-rows: repeat(7, 2.5rem);
   /* space between icons */
   grid-template-areas:
-    "explore""subs"
-    "lib""history""myvids""later"
-    "liked ""creator";
+    "explore" "subs"
+    "lib" "history" "myvids" "later"
+    "liked " "creator";
 }
 
 @keyframes menu_in {
@@ -503,8 +503,8 @@ nav li {
   /* space between icons */
   grid-template-columns: 6rem 6rem;
   grid-template-areas:
-    "..""..""channel""settings"
-    "..""theme""light dark""..""el en";
+    ".." ".." "channel" "settings"
+    ".." "theme" "light dark" ".." "el en";
 }
 
 @keyframes menu_right_in {
@@ -690,6 +690,21 @@ nav li {
 
 /*  6. media */
 
+@media only screen and (max-width: 890px) and (min-width: 717px) {
+  #video_container {
+    left: 12rem;
+    width: 76vw;
+  }
+}
+
+@media only screen and (max-width: 717px) {
+  #video_container {
+    left: 37vw;
+    width: 76vw;
+  }
+}
+
+
 @media only screen and (max-width: 990px) and (min-width: 800px) {
   #search_form {
     width: 40vw;
@@ -742,8 +757,8 @@ nav li {
     /* space between icons */
     grid-template-columns: 6rem 6rem;
     grid-template-areas:
-      "..""..""channel""settings"
-      "..""theme""light dark""..""el en";
+      ".." ".." "channel" "settings"
+      ".." "theme" "light dark" ".." "el en";
   }
 
   @keyframes menu_right_in {
