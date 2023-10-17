@@ -182,7 +182,7 @@ if (firef) {
 
     if (current_width >= 900) {
       video_container.style.marginLeft = "0.5rem";
-      video_container.style.width = "93vw";
+      //video_container.style.width = "93vw";
     }
 
     else if (current_width < 900) {
