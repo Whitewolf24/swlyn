@@ -690,6 +690,12 @@ nav li {
 
 /*  6. media */
 
+@media only screen and (max-width: 1184px) and (min-width: 890px) {
+  #video_container {
+    left: 7rem;
+  }
+}
+
 @media only screen and (max-width: 890px) and (min-width: 717px) {
   #video_container {
     left: 12rem;
