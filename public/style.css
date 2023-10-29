@@ -27,7 +27,7 @@ nav {
 
 /* -------------------------------------------- */
 
-@supports (-moz-appearance:none) {
+@-moz-document url-prefix() {
 
   /* 1.basics */
   @font-face {
@@ -1577,7 +1577,7 @@ nav {
 
 /*  //////////////////////    */
 
-@supports (-webkit-font-smoothing: antialiased) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
 
   /* 1.basics */
   @font-face {
