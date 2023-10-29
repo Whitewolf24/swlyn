@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    //
     <meta name=" referrer" content="strict-origin-when-cross-origin" />
     <meta name="color-scheme" content="light dark" />
     <meta name="google" content="notranslate" />
@@ -65,8 +66,8 @@
                         class="transparent_pic topbar_ico" style="cursor: pointer;"
                         onclick="
                         sidebar_right_container= document.querySelector('#sidebar_right_container');   
-                         if (sidebar_right_container.style.display == 'none'){sidebar_right_container.cssText  += 'display: grid'; sidebar_right_container.style.cssText += 'right: 0rem'} 
-                         else if (sidebar_right_container.style.display == 'grid'){sidebar_right_container.style.cssText  += 'display: none'; sidebar_right_container.style.cssText += 'right: -20rem'}">
+                         if (sidebar_right_container.style.display === 'none'){sidebar_right_container.style.display = 'grid'; sidebar_right_container.style.right = '0rem'} 
+                         else {sidebar_right_container.style.display === 'none'; sidebar_right_container.style.right = '-20rem'}">
                 </li>
             </ul>
         </nav>
