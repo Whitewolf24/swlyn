@@ -65,9 +65,9 @@
                         alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
                         class="transparent_pic topbar_ico" style="cursor: pointer;"
                         onclick="
-                        sidebar_right_container= document.querySelector('#sidebar_right_container');   
-                         if (sidebar_right_container.style.display === 'none'){sidebar_right_container.style.display = 'grid'; sidebar_right_container.style.right = '0rem'} 
-                         else if (sidebar_right_container.style.display === 'grid') {sidebar_right_container.style.display = 'none'; sidebar_right_container.style.right = '-20rem'}">
+                        sidebar_right_container= document.querySelector('#sidebar_right_container');  
+                         if (sidebar_right_container.style.display === ''){sidebar_right_container.style.display = 'grid'; sidebar_right_container.style.right = '0rem'} 
+                         else {sidebar_right_container.style.display = 'none'; sidebar_right_container.style.right = '-20rem'}">
                 </li>
             </ul>
         </nav>
