@@ -12,7 +12,7 @@
     <meta name="robots" content="noindex">
     <title>Γεώργιος Μαρίνος,Fullstack Web Developer - ΣΩΛΥΝ</title>
     <link rel="icon" type="image/icon" sizes="64x64" href="public/img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="public/style.css" />
+    <link rel="stylesheet" href="public/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap"
@@ -63,10 +63,10 @@
                 <li draggable="false" id="profile_li" tabindex=-1> <img src="public\img\profile.png" tabindex=0
                         alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
                         class="transparent_pic topbar_ico" style="cursor: pointer;"
-                        onclick="
-                        sidebar_right_container= document.querySelector('#sidebar_right_container');  
-                         if (sidebar_right_container.style.display === '' || sidebar_right_container.style.display === 'none'){sidebar_right_container.style.display = 'grid'; sidebar_right_container.style.right = '0rem'} 
-                         if (!sidebar_right_container.style.display === '' || !sidebar_right_container.style.display === 'none') {sidebar_right_container.style.display = 'none'; sidebar_right_container.style.right = '-20rem'}">
+                        onclick='
+                        sidebar_right_container= document.querySelector("#sidebar_right_container");  
+                         if (sidebar_right_container.style.display === "" || sidebar_right_container.style.display === "none"){sidebar_right_container.style.display = "grid"; sidebar_right_container.style.right = "0rem"} 
+                         if (sidebar_right_container.style.display === "grid") {sidebar_right_container.style.display = "none"; sidebar_right_container.style.right = "-20rem"}'>
                 </li>
             </ul>
         </nav>

@@ -714,6 +714,7 @@ nav li {
 @media only screen and (min-width: 890px) {
   #video_container {
     left: 9vw !important;
+    width: 90vw !important;
   }
 }
 
@@ -1325,11 +1326,11 @@ nav li {
 
 @supports (-webkit-font-smoothing: antialiased) {
   nav {
-    right: 1rem !important;
+    right: 2rem !important;
   }
 
   .video_container {
-    left: 38vw !important;
+    left: 30vw !important;
   }
 
   #bell_butt {

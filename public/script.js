@@ -43,7 +43,7 @@ const sidebar_txt = document.getElementsByClassName("side_text");
 
 const creator = document.querySelector("#creator");
 
-const articles = document.getElementsByTagName("article");
+const articles = document.querySelector("article");
 const article_count = articles.length;
 
 const GOO_ico = Array.from(document.getElementsByClassName("topbar_ico"));
@@ -332,9 +332,9 @@ else if (goog) {
       video_container.style.left = "20vw";
     }
 
-    else if (current_width <= 623) {
-      video_container.style.left = "30vw";
-    }
+    /*   else if (current_width <= 623) {
+        video_container.style.left = "30vw";
+      } */
   });
 
 
@@ -877,7 +877,7 @@ function invert_d() {
 
   document.querySelector("#sidebar_right").style.backgroundColor = "#202020";
   document.querySelector("#video_container").style.backgroundColor = "#181818";
-  document.getElementsByTagName("body").style.backgroundColor = "#181818";
+  document.querySelector("body").style.backgroundColor = "#181818";
   document.querySelector("#head").style.backgroundColor = "#202020";
   left_container.style.backgroundColor = "#202020";
 
@@ -920,7 +920,7 @@ function invert_l() {
 
   document.querySelector("#sidebar_right").style.backgroundColor = "white";
   document.querySelector("#video_container").style.backgroundColor = "white";
-  document.getElementsByTagName("body").style.backgroundColor = "white";
+  document.querySelector("body").style.backgroundColor = "white";
   document.querySelector("#head").style.backgroundColor = "white";
   left_container.style.backgroundColor = "white";
 
