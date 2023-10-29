@@ -8,6 +8,25 @@
 */
 
 /* -------------------------------------------- */
+
+nav {
+  right: 6rem !important;
+}
+
+.video_container {
+  left: 20vw !important;
+}
+
+#bell_butt {
+  width: 19px !important;
+}
+
+#camera_butt {
+  width: 22px !important;
+}
+
+/* -------------------------------------------- */
+
 @supports (-moz-appearance:none) {
 
   /* 1.basics */
@@ -3165,20 +3184,6 @@
   }
 }
 
-nav {
-  right: 6rem !important;
-}
 
-.video_container {
-  left: 20vw !important;
-}
-
-#bell_butt {
-  width: 19px !important;
-}
-
-#camera_butt {
-  width: 22px !important;
-}
 
 /* } */
