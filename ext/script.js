@@ -64,6 +64,17 @@ let hidden_prof = true;
 
 let current_width = window.innerWidth;
 
+var html = document.querySelector("html");
+var head = document.querySelector("#head");
+var nav = document.querySelector("nav");
+var icos = document.querySelector("#icos");
+//var video_container = document.querySelector("#video_container");
+var bell_butt = document.querySelector("#bell_butt");
+var camera_butt = document.querySelector("#camera_butt");
+//var creator = document.querySelector("#creator");
+var search_butt = document.querySelector("#search_butt");
+var video_boxes = document.querySelector(".video_boxes");
+
 /* ///// */
 
 let goog;
@@ -93,18 +104,24 @@ let load = 1;
 
 if (document.cookie.length === 0) {
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    invert_l();
-  }
+  window.addEventListener("load", (event) => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      invert_l();
+      Cookies.set("theme", "light", {
+        expires: 300,
+        path: ''
+      });
+    }
 
-  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    invert_d();
-  }
-
-  Cookies.set("theme", "light", {
-    expires: 300,
-    path: ''
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      invert_d();
+      Cookies.set("theme", "light", {
+        expires: 300,
+        path: ''
+      });
+    }
   });
+
 
   Cookies.set("lang", "gr", {
     expires: 300,
@@ -250,6 +267,26 @@ else if (goog) {
   logo.style.width = "63%";
   //video_container.style.left = "7.5rem";
   video_container.style.width = "88vw";
+
+
+  html.style.bottom = "3.5rem !important";
+  html.style.position = "relative !important";
+  //html.style.right = "4.2rem";
+  html.style.transform = "scale(0.9) !important";
+  head.style.width = "125% !important";
+  nav.style.marginTop = "0.5rem !important";
+  nav.style.right = "0.5rem";
+  nav.style.position = "relative !important";
+  icos.style.marginLeft = "-2rem !important";
+  video_container.style.left = "39vw !important";
+  bell_butt.style.marginInline = "0.1rem !important";
+  bell_butt.style.width = "19px !important";
+  camera_butt.style.marginLeft = "0.7rem !important";
+  camera_butt.style.marginRight = "0.2rem !important";
+  camera_butt.style.width = "22px; !important";
+  creator.style.marginLeft = "2.2rem !important";
+  search_butt.style.marginRight = "0.1rem !important";
+  video_boxes.style.marginBottom = "2.5rem !important";
 
 
   for (left_p = 0; left_p < sidebar_txt.length; left_p++) {
@@ -1053,35 +1090,3 @@ function switch_channel_eng(item) {
 
 
 ////////////////////////////////
-
-if (navigator.userAgent.includes("Chrome") && navigator.userAgent.includes("Mobi")) {
-  var html = document.querySelector("html");
-  var head = document.querySelector("#head");
-  var nav = document.querySelector("nav");
-  var icos = document.querySelector("#icos");
-  //var video_container = document.querySelector("#video_container");
-  var bell_butt = document.querySelector("#bell_butt");
-  var camera_butt = document.querySelector("#camera_butt");
-  //var creator = document.querySelector("#creator");
-  var search_butt = document.querySelector("#search_butt");
-  var video_boxes = document.querySelector(".video_boxes");
-
-  html.style.bottom = "3.5rem !important";
-  html.style.position = "relative !important";
-  //html.style.right = "4.2rem";
-  html.style.transform = "scale(0.9) !important";
-  head.style.width = "125% !important";
-  nav.style.marginTop = "0.5rem !important";
-  nav.style.right = "0.5rem";
-  nav.style.position = "relative !important";
-  icos.style.marginLeft = "-2rem !important";
-  video_container.style.left = "39vw !important";
-  bell_butt.style.marginInline = "0.1rem !important";
-  bell_butt.style.width = "19px !important";
-  camera_butt.style.marginLeft = "0.7rem !important";
-  camera_butt.style.marginRight = "0.2rem !important";
-  camera_butt.style.width = "22px; !important";
-  creator.style.marginLeft = "2.2rem !important";
-  search_butt.style.marginRight = "0.1rem !important";
-  video_boxes.style.marginBottom = "2.5rem !important";
-}
