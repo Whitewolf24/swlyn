@@ -1272,6 +1272,8 @@ nav li {
       margin-left: 2.2rem;
     }
 
+    #sidebar_right_container {margin-right: -8rem;}
+
     #search_butt {
       margin-right: 0.1rem;
     }

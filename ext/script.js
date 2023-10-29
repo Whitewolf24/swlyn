@@ -1051,7 +1051,9 @@ function switch_channel_eng(item) {
 if (navigator.userAgent.includes("Chrome") && navigator.userAgent.includes("Mobi")) {
   const html = document.getElementsByTagName("html");
   const header = document.getElementsByTagName("header");
+  const nav = document.getElementsByTagName("nav");
   const icos = document.querySelector("#icos");
+  const video_container = document.querySelector("#video_container");
   const bell_butt = document.querySelector("#bell_butt");
   const camera_butt = document.querySelector("#camera_butt");
   const creator = document.querySelector("#creator");
@@ -1063,10 +1065,15 @@ if (navigator.userAgent.includes("Chrome") && navigator.userAgent.includes("Mobi
   html.style.cssText += "right: 4.2rem";
   html.style.cssText += "transform: scale(0.9)";
   header.style.cssText += "width: 125%";
+  nav.style.cssText += "position: relative";
+  nav.style.cssText += "right: 2rem";
   icos.style.cssText += "margin-left: -1.2rem";
+  video_container.style.cssText += "left: 38vw";
   bell_butt.style.cssText += "margin-inline: 0.1rem";
+  bell_butt.style.cssText += "width: 19px";
   camera_butt.style.cssText += "margin-left: 0.4rem";
   camera_butt.style.cssText += "margin-right: 0.2rem";
+  camera_butt.style.cssText += "width: 22px;";
   creator.style.cssText += "margin-left: 2.2rem";
   search_butt.style.cssText += "margin-right: 0.1rem";
   video_boxes.style.cssText += " margin-bottom: 2.5rem";
