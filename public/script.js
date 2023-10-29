@@ -417,7 +417,7 @@ burger_li.addEventListener("mouseleave", function () {
 
 /* ///// */
 
-profile_butt.addEventListener("click", function () {
+/* profile_butt.addEventListener("click", function () {
   if (hidden_prof == true) {
     right_container.classList.add("sidebar_right_container_show");
     right_container.classList.remove("sidebar_right_container_hide");
@@ -433,7 +433,7 @@ profile_butt.addEventListener("click", function () {
     left_container.classList.remove("sidebar_left_container_show");
     hidden = true;
   }
-});
+}); */
 
 /* ///// */
 

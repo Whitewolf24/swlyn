@@ -137,10 +137,10 @@ button {
   border: none !important;
 }
 
-nav {
+/* nav {
   right: 1rem;
   position: relative;
-}
+} */
 
 nav a {
   color: inherit;
@@ -476,7 +476,7 @@ nav li {
   display: none;
 }
 
-.sidebar_right_container_show {
+/* .sidebar_right_container_show {
   display: grid;
   animation: menu_right_in 0.4s ease forwards;
 }
@@ -484,7 +484,7 @@ nav li {
 .sidebar_right_container_hide {
   display: none;
   animation: menu_right_out 1s ease forwards;
-}
+} */
 
 #sidebar_right_container li:hover:not(.line_right) {
   filter: invert(0.45) brightness(0.5);
@@ -503,6 +503,8 @@ nav li {
   margin-left: 4.5rem;
   margin-top: 6rem;
   cursor: pointer;
+  transition: right 4s;
+  transition-timing-function: ease-in-out;
 }
 
 #sidebar_right
@@ -526,7 +528,7 @@ nav li {
     ".." "theme" "light dark" ".." "el en";
 }
 
-@keyframes menu_right_in {
+/*@keyframes menu_right_in {
   0% {
     right: -20rem;
     display: none;
@@ -534,12 +536,9 @@ nav li {
 
   100% {
     right: 0;
-    /*  opacity: 1; */
-    display: grid;
-  }
-}
+    /*  opacity: 1; 
 
-@keyframes menu_right_out {
+ @keyframes menu_right_out {
   0% {
     right: 0;
     display: grid;
@@ -548,10 +547,7 @@ nav li {
   100% {
     right: -20rem;
     /*  opacity: 0; */
-    display: none;
-  }
-}
-
+*/
 /* ///// */
 
 #channel_li {
