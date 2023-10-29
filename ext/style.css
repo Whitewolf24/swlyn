@@ -471,10 +471,12 @@ nav li {
 }
 
 .sidebar_right_container_show {
+  opacity: 0;
   animation: menu_right_in 0.4s ease forwards;
 }
 
 .sidebar_right_container_hide {
+  opacity: 1;
   animation: menu_right_out 1s ease forwards;
 }
 
