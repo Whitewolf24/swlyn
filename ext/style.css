@@ -1241,3 +1241,43 @@ nav li {
     margin-left: 0.2rem;
   }
 }
+
+@media (hover: none) {
+  @supports (-moz-appearance: none) {
+    html {
+      bottom: 3.5rem;
+      position: relative;
+      right: 4.2rem;
+      transform: scale(0.9);
+    }
+
+    header {
+      width: 125%;
+    }
+
+    #icos {
+      margin-left: -1.2rem;
+    }
+
+    #bell_butt {
+      margin-inline: 0.1rem;
+    }
+
+    #camera_butt {
+      margin-left: 0.4rem;
+      margin-right: 0.2rem;
+    }
+
+    #creator {
+      margin-left: 2.2rem;
+    }
+
+    #search_butt {
+      margin-right: 0.1rem;
+    }
+
+    .video_boxes {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

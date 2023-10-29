@@ -1048,4 +1048,26 @@ function switch_channel_eng(item) {
 
 ////////////////////////////////
 
+if (navigator.userAgent.includes("Chrome") && navigator.userAgent.includes("Mobi")) {
+  const html = document.getElementsByTagName("html");
+  const header = document.getElementsByTagName("header");
+  const icos = document.querySelector("#icos");
+  const bell_butt = document.querySelector("#bell_butt");
+  const camera_butt = document.querySelector("#camera_butt");
+  const creator = document.querySelector("#creator");
+  const search_butt = document.querySelector("#search_butt");
+  const video_boxes = document.querySelector(".video_boxes");
 
+  html.style.cssText += "bottom: 3.5rem";
+  html.style.cssText += "position: relative";
+  html.style.cssText += "right: 4.2rem";
+  html.style.cssText += "transform: scale(0.9)";
+  header.style.cssText += "width: 125%";
+  icos.style.cssText += "margin-left: -1.2rem";
+  bell_butt.style.cssText += "margin-inline: 0.1rem";
+  camera_butt.style.cssText += "margin-left: 0.4rem";
+  camera_butt.style.cssText += "margin-right: 0.2rem";
+  creator.style.cssText += "margin-left: 2.2rem";
+  search_butt.style.cssText += "margin-right: 0.1rem";
+  video_boxes.style.cssText += " margin-bottom: 2.5rem";
+}
