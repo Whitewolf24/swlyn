@@ -1259,23 +1259,35 @@ nav li {
       margin-left: -1.2rem;
     }
 
+    nav {
+      margin-top: 0.5rem;
+    }
+
     #bell_butt {
       margin-inline: 0.1rem;
+      width: 19px;
     }
 
     #camera_butt {
       margin-left: 0.4rem;
       margin-right: 0.2rem;
+      width: 22px;
     }
 
     #creator {
       margin-left: 2.2rem;
     }
 
-    #sidebar_right_container {margin-right: -8rem;}
+    #sidebar_right_container {
+      margin-right: -8rem;
+    }
 
     #search_butt {
       margin-right: 0.1rem;
+    }
+
+    .video_container {
+      left: 37vw;
     }
 
     .video_boxes {
