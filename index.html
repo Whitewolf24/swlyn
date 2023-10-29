@@ -119,12 +119,14 @@
         <ul id="sidebar_right">
             <li tabindex=-1 id="channel_li" draggable="false" con><a href="#" draggable="false" target="_self"
                     tabindex=-1 class="side_li">
-                    <img tabindex=-1 src="public\img\channel.png" draggable="false" class="transparent_pic side_img">
+                    <img tabindex=-1 src="public\img\channel.png" draggable="false" id="profil_butt"
+                        class="transparent_pic side_img">
                     <p tabindex=0 id="channel_txt" class="side_text_right">Το Προφίλ μου</p>
                 </a></li>
             <li tabindex=0 id="settings_li" draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1
                     class="side_li">
-                    <img src="public\img\settings.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\settings.png" draggable="false" tabindex=-1 id="gear_butt"
+                        class="transparent_pic side_img">
                     <p tabindex=0 id="settings_txt" class="side_text_right">Ρυθμίσεις</p>
                 </a></li>
             <li tabindex=0 id="light_li" draggable="false" class="side_li">
@@ -2319,7 +2321,19 @@
                 filter: invert();
             }
 
+            #search_butt {
+                filter: invert();
+            }
+
             #dots_butt {
+                filter: invert();
+            }
+
+            #profil_butt {
+                filter: invert();
+            }
+
+            #gear_butt {
                 filter: invert();
             }
 
@@ -2331,9 +2345,39 @@
                 filter: invert();
             }
 
-            #profile_butt {
+            explore_li {
                 filter: invert();
             }
+
+            subs_li {
+                filter: invert();
+            }
+
+
+            library_li {
+                filter: invert();
+            }
+
+
+            history_li {
+                filter: invert();
+            }
+
+
+            vid_li {
+                filter: invert();
+            }
+
+
+            later_li {
+                filter: invert();
+            }
+
+
+            side_img {
+                filter: invert();
+            }
+
         }
     }
 
@@ -2341,7 +2385,7 @@
 
         /*  @supports not (-moz-appearance: none) { */
         nav {
-            right: 2rem !important;
+            right: 3rem !important;
         }
 
         .video_container {
