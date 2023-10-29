@@ -152,7 +152,7 @@ nav ul {
   align-items: center;
   display: grid;
   grid-template-areas: "burger logo search search camera dots bell profile";
-  grid-template-columns: 0.1fr, repeat(3, 1fr), repeat(4, 0.1fr);
+  grid-template-columns: 0.1fr repeat(3, 1fr) repeat(4, 0.1fr);
   margin: 0;
 }
 
