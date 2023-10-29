@@ -281,15 +281,15 @@ else if (goog) {
   html.style.transform = "scale(0.9) !important";
   head.style.width = "125% !important";
   nav.style.marginTop = "0.5rem !important";
-  nav.style.right = "1rem";
-  nav.style.position = "relative !important";
+  //nav.style.right = "1rem";
+  //nav.style.position = "relative !important";
   icos.style.marginLeft = "-2rem !important";
-  video_container.style.left = "38vw !important";
+  //video_container.style.left = "38vw !important";
   bell_butt.style.marginInline = "0.1rem !important";
-  bell_butt.style.width = "19px !important";
+  //bell_butt.style.width = "19px !important";
   camera_butt.style.marginLeft = "0.7rem !important";
   camera_butt.style.marginRight = "0.2rem !important";
-  camera_butt.style.width = "22px; !important";
+  //camera_butt.style.width = "22px; !important";
   creator.style.marginLeft = "2.2rem !important";
   search_butt.style.marginRight = "0.1rem !important";
   video_boxes.style.marginBottom = "2.5rem !important";
@@ -877,8 +877,8 @@ function invert_d() {
 
   document.querySelector("#sidebar_right").style.backgroundColor = "#202020";
   document.querySelector("#video_container").style.backgroundColor = "#181818";
-  document.querySelector("body").style.backgroundColor = "#181818";
-  document.querySelector("header").style.backgroundColor = "#202020";
+  document.getElementsByTagName("body").style.backgroundColor = "#181818";
+  document.querySelector("#head").style.backgroundColor = "#202020";
   left_container.style.backgroundColor = "#202020";
 
   video_channel_array.forEach(meta_switch);
@@ -920,8 +920,8 @@ function invert_l() {
 
   document.querySelector("#sidebar_right").style.backgroundColor = "white";
   document.querySelector("#video_container").style.backgroundColor = "white";
-  document.querySelector("body").style.backgroundColor = "white";
-  document.querySelector("header").style.backgroundColor = "white";
+  document.getElementsByTagName("body").style.backgroundColor = "white";
+  document.querySelector("#head").style.backgroundColor = "white";
   left_container.style.backgroundColor = "white";
 
   video_channel_array.forEach(meta_switch_del);
