@@ -737,12 +737,12 @@ nav li {
     width: 40vw;
   }
 
-  /*  */
+  /*  
   #sidebar_right_container {
     position: fixed;
     right: -20rem;
     z-index: 998;
-  }
+  }*/
 
   .sidebar_right_container_show {
     animation: menu_right_in 0.4s ease forwards;
