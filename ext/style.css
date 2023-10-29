@@ -391,11 +391,11 @@ nav li {
 @keyframes menu_in {
   0% {
     transform: translate(-100%, 0%);
+    display: grid;
   }
 
   100% {
     transform: translate(0%, 0%);
-    display: grid;
   }
 }
 
@@ -406,6 +406,7 @@ nav li {
 
   100% {
     transform: translate(-100%, 0%);
+    display: none;
   }
 }
 
