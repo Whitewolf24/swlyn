@@ -137,6 +137,11 @@ button {
   border: none !important;
 }
 
+nav {
+  right: 1rem;
+  position: relative;
+}
+
 nav a {
   color: inherit;
   list-style: none;
