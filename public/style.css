@@ -1324,7 +1324,7 @@ nav li {
   }
 }
 
-@supports (-webkit-font-smoothing: antialiased) {
+@media screen and (max-width:376px) {
   nav {
     right: 2rem !important;
   }
