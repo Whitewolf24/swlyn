@@ -132,9 +132,9 @@ header {
   z-index: 999;
 }
 
-button{
-  background-color: transparent;
-  border: none;
+button {
+  background: none !important;
+  border: none !important;
 }
 
 nav a {
@@ -1294,7 +1294,7 @@ nav li {
     }
 
     .video_container {
-      left: 40vw !important;
+      left: 35vw !important;
     }
 
     .video_boxes {
