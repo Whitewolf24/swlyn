@@ -1048,34 +1048,3 @@ function switch_channel_eng(item) {
 
 ////////////////////////////////
 
-
-if (navigator.userAgent.includes("Chrome") && navigator.userAgent.includes("Mobi")) {
-  var html = document.querySelector("html");
-  var head = document.querySelector("#header");
-  var nav = document.querySelector("nav");
-  var icos = document.querySelector("#icos");
-  //var video_container = document.querySelector("#video_container");
-  var bell_butt = document.querySelector("#bell_butt");
-  var camera_butt = document.querySelector("#camera_butt");
-  //var creator = document.querySelector("#creator");
-  var search_butt = document.querySelector("#search_butt");
-  var video_boxes = document.querySelector(".video_boxes");
-
-  html.style.bottom = "3.5rem";
-  html.style.position = "relative";
-  html.style.right = "4.2rem";
-  html.style.transform = "scale(0.9)";
-  head.style.width = "125%";
-  nav.style.marginTop = "0.5rem";
-  icos.style.marginLeft = "-2rem";
-  video_container.style.left = "37vw";
-  bell_butt.style.marginInline = "0.1rem";
-  bell_butt.style.width = "19px";
-  camera_butt.style.marginLeft = "0.8rem";
-  camera_butt.style.marginRight = "0.2rem";
-  camera_butt.style.width = "22px;";
-  creator.style.marginLeft = "2.2rem";
-  search_butt.style.marginRight = "0.1rem";
-  video_boxes.style.marginBottom = "2.5rem";
-}
-
