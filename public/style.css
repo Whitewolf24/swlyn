@@ -1612,7 +1612,7 @@ nav li {
   }
 }
 
-@media (max-width:376px) {
+@media screen and (max-width:376px) {
 
   /*  @supports not (-moz-appearance: none) { */
   nav {
