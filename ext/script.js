@@ -64,16 +64,16 @@ let hidden_prof = true;
 
 let current_width = window.innerWidth;
 
-var html = document.querySelector("html");
-var head = document.querySelector("#head");
-var nav = document.querySelector("nav");
-var icos = document.querySelector("#icos");
-//var video_container = document.querySelector("#video_container");
-var bell_butt = document.querySelector("#bell_butt");
-var camera_butt = document.querySelector("#camera_butt");
-//var creator = document.querySelector("#creator");
-var search_butt = document.querySelector("#search_butt");
-var video_boxes = document.querySelector(".video_boxes");
+const html = document.querySelector("html");
+const head = document.querySelector("#head");
+const nav = document.querySelector("nav");
+const icos = document.querySelector("#icos");
+//const video_container = document.querySelector("#video_container");
+const bell_butt = document.querySelector("#bell_butt");
+const camera_butt = document.querySelector("#camera_butt");
+//const creator = document.querySelector("#creator");
+const search_butt = document.querySelector("#search_butt");
+const video_boxes = document.querySelector(".video_boxes");
 
 /* ///// */
 
@@ -97,8 +97,8 @@ else if (navigator.userAgent.indexOf("Firefox") != -1) {
 
 /* 1. cookies */
 /* set and call cookies */
-var lang = Cookies.get("lang");
-var theme = Cookies.get("theme");
+let lang = Cookies.get("lang");
+let theme = Cookies.get("theme");
 
 let load = 1;
 
@@ -278,7 +278,7 @@ else if (goog) {
   nav.style.right = "0.5rem";
   nav.style.position = "relative !important";
   icos.style.marginLeft = "-2rem !important";
-  video_container.style.left = "39vw !important";
+  video_container.style.left = "38vw !important";
   bell_butt.style.marginInline = "0.1rem !important";
   bell_butt.style.width = "19px !important";
   camera_butt.style.marginLeft = "0.7rem !important";
