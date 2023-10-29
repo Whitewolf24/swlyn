@@ -11,14 +11,14 @@
     <meta name="author" content="George Marinos" />
     <meta name="robots" content="noindex">
     <title>Γεώργιος Μαρίνος,Fullstack Web Developer - ΣΩΛΥΝ</title>
-    <link rel="icon" type="image/icon" sizes="64x64" href="ext/img/favicon.ico" />
-    <link rel="stylesheet" href="ext/style.css" />
+    <link rel="icon" type="image/icon" sizes="64x64" href="public/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="public/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
-    <script src="ext/js.cookie.js"></script>
-    <script src="ext/script.js" defer></script>
+    <script src="public/js.cookie.js"></script>
+    <script src="public/script.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <nav>
             <ul>
                 <li data-tip="Μενού" id="burger_li" draggable="false" tabindex=-1 id="burger_li"
-                    style="cursor: pointer;"> <img src="ext\img\burger.png" alt="Μενού" aria-label="Μενού" tabindex=0
+                    style="cursor: pointer;"> <img src="public\img\burger.png" alt="Μενού" aria-label="Μενού" tabindex=0
                         id="burger_butt" class="transparent_pic">
                 </li>
                 <div id="logo_li">
@@ -40,27 +40,27 @@
                     <form id="search_form"> <input type="search" placeholder="Αναζήτηση" aria-label=" Φόρμα Αναζήτησης"
                             id="search_bar">
                         <button draggable="false" tabindex=-1 id="search_butt" target="_self"><img
-                                src="ext\img\search.png" alt="Αναζήτηση" aria-label="Αναζήτηση" draggable="false"
+                                src="public\img\search.png" alt="Αναζήτηση" aria-label="Αναζήτηση" draggable="false"
                                 tabindex=0 id="search_glass" class="transparent_pic"></button>
                     </form>
                 </li>
                 <li data-tip="Δημιουργία Βιντεο" draggable="false" id="camera_li" tabindex=-1>
-                    <a href="#" draggable="false" target="_self" tabindex=0><img src="ext\img\camera.png" tabindex=-1
+                    <a href="#" draggable="false" target="_self" tabindex=0><img src="public\img\camera.png" tabindex=-1
                             alt="Δημιουργία Βίντεο" aria-label="Δημιουργία Βιντεο" draggable="false" id="camera_butt"
                             class="transparent_pic camera_hover topbar_ico"> </a>
                 </li>
 
                 <li data-tip="Εφαρμογές" draggable="false" id="dots_li" tabindex=-1><a href="#" draggable="false"
-                        target="_self" tabindex=0><img src="ext\img\apps.png" tabindex=-1 alt="Εφαρμογές"
+                        target="_self" tabindex=0><img src="public\img\apps.png" tabindex=-1 alt="Εφαρμογές"
                             aria-label="Εφαρμογές" draggable="false" id="dots_butt" class="transparent_pic topbar_ico">
                     </a> </li>
                 <li data-tip="Ειδο/σεις" draggable="false" id="bell_li" tabindex=-1><a href="#" target="_self"
                         tabindex=0>
-                        <img src="ext\img\bell.png" tabindex=-1 alt="Ειδοποιήσεις" aria-label="Ειδοποιήσεις"
+                        <img src="public\img\bell.png" tabindex=-1 alt="Ειδοποιήσεις" aria-label="Ειδοποιήσεις"
                             draggable="false" id="bell_butt" class="transparent_pic topbar_ico"></a>
                 </li>
 
-                <li draggable="false" id="profile_li" tabindex=-1> <img src="ext\img\profile.png" tabindex=0
+                <li draggable="false" id="profile_li" tabindex=-1> <img src="public\img\profile.png" tabindex=0
                         alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
                         class="transparent_pic topbar_ico" style="cursor: pointer;">
                 </li>
@@ -74,37 +74,37 @@
         <ul id="sidebar_left">
             <li tabindex=0 draggable="false" con><a href="#" draggable="false" target="_self" tabindex=-1
                     id="explore_li" class="side_li">
-                    <img tabindex=-1 src="ext\img\explore.png" draggable="false" class="transparent_pic side_img">
+                    <img tabindex=-1 src="public\img\explore.png" draggable="false" class="transparent_pic side_img">
                     <p tabindex=-1 id="explore_txt" class="side_text">Εξερεύνηση</p>
                 </a></li>
             <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="subs_li"
                     class="side_li">
-                    <img src="ext\img\subs.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\subs.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=-1 id="subs_txt" class="side_text">Εγγραφές</p>
                 </a></li>
             <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="library_li"
                     class="side_li">
-                    <img src="ext\img\library.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\library.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=-1 id="library_txt" class="side_text">Βιβλιοθήκη</p>
                 </a></li>
             <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="history_li"
                     class="side_li">
-                    <img src="ext\img\history.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\history.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=-1 id="history_txt" class="side_text"> Ιστορικό</p>
                 </a></li>
             <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="vid_li"
                     class="side_li">
-                    <img src="ext\img\yourvids.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\yourvids.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=-1 id="vid_txt" class="side_text">Τα Βίντεό σας</p>
                 </a></li>
             <li tabindex=0 draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1 id="later_li"
                     class="side_li">
-                    <img src="ext\img\later.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\later.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=-1 id="later_txt" class="side_text">Δείτε Αργότερα</p>
                 </a></li>
             <li tabindex=0 id="like_li" draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1
                     class="side_li">
-                    <img src="ext\img\liked.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\liked.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=-1 id="like_txt" class="side_text">Αρεσκόμενα Βίντεο</p>
             </li>
             <li tabindex=-1 id="creator_li">
@@ -119,21 +119,21 @@
         <ul id="sidebar_right">
             <li tabindex=-1 id="channel_li" draggable="false" con><a href="#" draggable="false" target="_self"
                     tabindex=-1 class="side_li">
-                    <img tabindex=-1 src="ext\img\channel.png" draggable="false" class="transparent_pic side_img">
+                    <img tabindex=-1 src="public\img\channel.png" draggable="false" class="transparent_pic side_img">
                     <p tabindex=0 id="channel_txt" class="side_text_right">Το Προφίλ μου</p>
                 </a></li>
             <li tabindex=0 id="settings_li" draggable="false"><a href="#" draggable="false" target="_self" tabindex=-1
                     class="side_li">
-                    <img src="ext\img\settings.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
+                    <img src="public\img\settings.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=0 id="settings_txt" class="side_text_right">Ρυθμίσεις</p>
                 </a></li>
             <li tabindex=0 id="light_li" draggable="false" class="side_li">
-                <img src="ext\img\light.png" draggable="false" tabindex=-1 id="light_butt"
+                <img src="public\img\light.png" draggable="false" tabindex=-1 id="light_butt"
                     class="transparent_pic side_img">
                 <p tabindex=0 id="light_txt" class="side_text_right">Φωτεινό Θέμα</p>
             </li>
             <li tabindex=0 id="dark_li" draggable="false" class="side_li">
-                <img src="ext\img\dark.png" draggable="false" tabindex=-1 id="dark_butt"
+                <img src="public\img\dark.png" draggable="false" tabindex=-1 id="dark_butt"
                     class="transparent_pic side_img">
                 <p tabindex=0 id="dark_txt" class="side_text_right">Σκοτεινό Θέμα</p>
             </li>
