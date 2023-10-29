@@ -1616,11 +1616,11 @@ nav li {
 
   /*  @supports not (-moz-appearance: none) { */
   nav {
-    right: 20rem !important;
+    right: 2rem !important;
   }
 
   .video_container {
-    left: 30vw !important;
+    left: 28vw !important;
   }
 
   #bell_butt {
