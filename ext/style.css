@@ -1242,6 +1242,8 @@ nav li {
   }
 }
 
+/*  //////////////////////    */
+
 @media (hover: none) {
   @supports (-moz-appearance: none) {
     html {
@@ -1260,7 +1262,7 @@ nav li {
     }
 
     nav {
-      margin-top: 0.5rem;
+      margin-top: 0.5rem !important;
     }
 
     #bell_butt {
@@ -1287,11 +1289,15 @@ nav li {
     }
 
     .video_container {
-      left: 37vw;
+      left: 38vw !important;
     }
 
     .video_boxes {
       margin-bottom: 2.5rem;
     }
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  
 }

@@ -95,6 +95,14 @@ let load = 1;
 
 if (document.cookie.length === 0) {
 
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    invert_l();
+  }
+
+  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    invert_d();
+  }
+
   Cookies.set("theme", "light", {
     expires: 300,
     path: ''
@@ -322,10 +330,6 @@ else if (goog) {
 
 /* 3.1 menu animations */
 
-search_glass.addEventListener("click", function (e) {
-  e.preventDefault()
-});
-
 document.querySelector("#burger_butt").addEventListener("click", function () {
   if (hidden == true) {
     left_container.classList.add("sidebar_left_container_show");
@@ -489,7 +493,7 @@ document
     }
   });
 
-document.querySelector("#search_butt").addEventListener("click", function () {
+document.querySelector("#search_butt").addEventListener("click", function (event) {
   event.preventDefault();
 });
 
