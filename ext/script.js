@@ -1047,34 +1047,3 @@ function switch_channel_eng(item) {
 
 
 ////////////////////////////////
-
-if (navigator.userAgent.includes("Chrome") && navigator.userAgent.includes("Mobi")) {
-  const html = document.querySelector("html");
-  const header = document.querySelector("header");
-  //const nav = document.querySelector("nav");
-  const icos = document.querySelector("#icos");
-  const video_container = document.querySelector("#video_container");
-  const bell_butt = document.querySelector("#bell_butt");
-  const camera_butt = document.querySelector("#camera_butt");
-  const creator = document.querySelector("#creator");
-  const search_butt = document.querySelector("#search_butt");
-  const video_boxes = document.querySelector(".video_boxes");
-
-  html.style.bottom = "3.5rem";
-  html.style.position = "relative";
-  html.style.right = "4.2rem";
-  html.style.transform = "scale(0.9)";
-  header.style.width = "125%";
-  //nav.style.cssText += "position: relative";
-  //nav.style.cssText += "right: 2rem";
-  icos.style.marginLeft = "-1.2rem";
-  video_container.style.left = "38vw";
-  bell_butt.style.marginInline = "0.1rem";
-  bell_butt.style.width = "19px";
-  camera_butt.style.marginLeft = "0.4rem";
-  camera_butt.style.marginRight = "0.2rem";
-  camera_butt.style.width = "22px;";
-  creator.style.marginLeft = "2.2rem";
-  search_butt.style.marginRight = "0.1rem";
-  video_boxes.style.marginBottom = "2.5rem";
-}
