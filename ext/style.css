@@ -132,6 +132,11 @@ header {
   z-index: 999;
 }
 
+button{
+  background-color: transparent;
+  border: none;
+}
+
 nav a {
   color: inherit;
   list-style: none;
@@ -1262,7 +1267,7 @@ nav li {
     }
 
     nav {
-      margin-top: 0.5rem !important;
+      margin-top: 1rem !important;
     }
 
     #bell_butt {
@@ -1289,7 +1294,7 @@ nav li {
     }
 
     .video_container {
-      left: 38vw !important;
+      left: 40vw !important;
     }
 
     .video_boxes {
