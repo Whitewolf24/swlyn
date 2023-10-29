@@ -1613,21 +1613,23 @@ nav li {
 }
 
 @media (max-width:376px) {
-  @supports not (-moz-appearance: none) {
-    nav {
-      right: 20rem !important;
-    }
 
-    .video_container {
-      left: 30vw !important;
-    }
+  /*  @supports not (-moz-appearance: none) { */
+  nav {
+    right: 20rem !important;
+  }
 
-    #bell_butt {
-      width: 19px !important;
-    }
+  .video_container {
+    left: 30vw !important;
+  }
 
-    #camera_butt {
-      width: 22px !important;
-    }
+  #bell_butt {
+    width: 19px !important;
+  }
+
+  #camera_butt {
+    width: 22px !important;
   }
 }
+
+/* } */
