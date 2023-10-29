@@ -336,7 +336,7 @@ nav li {
 #sidebar_left_container {
   background-color: white;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
-  display: grid;
+  display: none;
   grid-template-columns: 13rem;
   /* sidebar width */
   grid-template-rows: 6rem 100vh;
@@ -395,6 +395,7 @@ nav li {
 
   100% {
     transform: translate(0%, 0%);
+    display: grid;
   }
 }
 
@@ -1294,7 +1295,7 @@ nav li {
     }
 
     .video_container {
-      left: 35vw !important;
+      left: 50vw !important;
     }
 
     .video_boxes {

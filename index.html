@@ -23,11 +23,10 @@
     <header id="head">
         <nav>
             <ul>
-                <button data-tip="Μενού" id="burger_li" draggable="false" tabindex=-1 style="cursor: pointer;"> <img
-                        src="ext\img\burger.png" alt="Μενού" aria-label="Μενού" tabindex=0 id="burger_butt"
-                        class="transparent_pic" />
-                </button>
-
+                <li data-tip="Μενού" id="burger_li" draggable="false" tabindex=-1 id="burger_li"
+                    style="cursor: pointer;"> <img src="ext\img\burger.png" alt="Μενού" aria-label="Μενού" tabindex=0
+                        id="burger_butt" class="transparent_pic">
+                </li>
                 <div id="logo_li">
                     <h1 id="logo" tabindex=0>
                         <a href="#" draggable="false" target="_self" tabindex=-1>
@@ -59,19 +58,17 @@
                             draggable="false" id="bell_butt" class="transparent_pic topbar_ico"></a>
                 </li>
 
-                <button>
-                    <li draggable="false" id="profile_li" tabindex=-1> <img src="ext\img\profile.png" tabindex=0
-                            alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
-                            class="transparent_pic topbar_ico" style="cursor: pointer;">
-                    </li>
-                </button>
+                <li draggable="false" id="profile_li" tabindex=-1> <img src="ext\img\profile.png" tabindex=0
+                        alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
+                        class="transparent_pic topbar_ico" style="cursor: pointer;">
+                </li>
             </ul>
         </nav>
     </header>
 
     <!--  -->
 
-    <div id="sidebar_left_container">
+    <div id="sidebar_left_container" class="">
         <ul id="sidebar_left">
             <li tabindex=0 draggable="false" con><a href="#" draggable="false" target="_self" tabindex=-1
                     id="explore_li" class="side_li">
@@ -116,7 +113,7 @@
     </div>
 
     <!--  -->
-    <div id="sidebar_right_container">
+    <div id="sidebar_right_container" class="">
         <ul id="sidebar_right">
             <li tabindex=-1 id="channel_li" draggable="false" con><a href="#" draggable="false" target="_self"
                     tabindex=-1 class="side_li">
@@ -128,32 +125,24 @@
                     <img src="ext\img\settings.png" draggable="false" tabindex=-1 class="transparent_pic side_img">
                     <p tabindex=0 id="settings_txt" class="side_text_right">Ρυθμίσεις</p>
                 </a></li>
-            <button>
-                <li tabindex=0 id="light_li" draggable="false" class="side_li">
-                    <img src="ext\img\light.png" draggable="false" tabindex=-1 id="light_butt"
-                        class="transparent_pic side_img">
-                    <p tabindex=0 id="light_txt" class="side_text_right">Φωτεινό Θέμα</p>
-                </li>
-            </button>
-            <button>
-                <li tabindex=0 id="dark_li" draggable="false" class="side_li">
-                    <img src="ext\img\dark.png" draggable="false" tabindex=-1 id="dark_butt"
-                        class="transparent_pic side_img">
-                    <p tabindex=0 id="dark_txt" class="side_text_right">Σκοτεινό Θέμα</p>
-                </li>
-            </button>
+            <li tabindex=0 id="light_li" draggable="false" class="side_li">
+                <img src="ext\img\light.png" draggable="false" tabindex=-1 id="light_butt"
+                    class="transparent_pic side_img">
+                <p tabindex=0 id="light_txt" class="side_text_right">Φωτεινό Θέμα</p>
+            </li>
+            <li tabindex=0 id="dark_li" draggable="false" class="side_li">
+                <img src="ext\img\dark.png" draggable="false" tabindex=-1 id="dark_butt"
+                    class="transparent_pic side_img">
+                <p tabindex=0 id="dark_txt" class="side_text_right">Σκοτεινό Θέμα</p>
+            </li>
             <li tabindex=-1 id="line_right_1" class="line_right" draggable="false"> </li>
             <li tabindex=-1 id="line_right_2" class="line_right" draggable="false"> </li>
-            <button>
-                <li tabindex=0 id="el_li" draggable="false" class="side_li">
-                    <p tabindex=-1 id="gr_txt" class="side_text_right">Ελληνικά</p>
-                </li>
-            </button>
-            <button>
-                <li tabindex=0 id="eng_li" draggable="false" class="side_li">
-                    <p tabindex=-1 id="eng_txt" class="side_text_right">Αγγλικά</p>
-                </li>
-            </button>
+            <li tabindex=0 id="el_li" draggable="false" class="side_li">
+                <p tabindex=-1 id="gr_txt" class="side_text_right">Ελληνικά</p>
+            </li>
+            <li tabindex=0 id="eng_li" draggable="false" class="side_li">
+                <p tabindex=-1 id="eng_txt" class="side_text_right">Αγγλικά</p>
+            </li>
         </ul>
     </div>
 
@@ -729,7 +718,7 @@
         nav.style.right = "0.5rem";
         nav.style.position = "relative";
         icos.style.marginLeft = "-2rem";
-        video_container.style.left = "33vw";
+        video_container.style.left = "35vw";
         bell_butt.style.marginInline = "0.1rem";
         bell_butt.style.width = "19px";
         camera_butt.style.marginLeft = "0.7rem";
