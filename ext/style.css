@@ -464,6 +464,7 @@ nav li {
 /* 4.sidebar_right */
 
 #sidebar_right_container {
+  opacity: 0;
   position: fixed;
   right: -20rem;
   z-index: 998;
@@ -518,22 +519,24 @@ nav li {
 }
 
 @keyframes menu_right_in {
-  from {
+  0% {
     right: -20rem;
   }
 
-  to {
+  100% {
     right: 0;
+    opacity: 1;
   }
 }
 
 @keyframes menu_right_out {
-  from {
+  0% {
     right: 0;
   }
 
-  to {
+  100% {
     right: -20rem;
+    opacity: 0;
   }
 }
 
