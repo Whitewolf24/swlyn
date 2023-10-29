@@ -1072,10 +1072,10 @@ if (navigator.userAgent.includes("Chrome") && navigator.userAgent.includes("Mobi
   html.style.transform = "scale(0.9) !important";
   head.style.width = "125% !important";
   nav.style.marginTop = "0.5rem !important";
-  //nav.style.right = "0.5rem";
+  nav.style.right = "0.5rem";
   nav.style.position = "relative !important";
   icos.style.marginLeft = "-2rem !important";
-  video_container.style.left = "37vw !important";
+  video_container.style.left = "39vw !important";
   bell_butt.style.marginInline = "0.1rem !important";
   bell_butt.style.width = "19px !important";
   camera_butt.style.marginLeft = "0.7rem !important";
