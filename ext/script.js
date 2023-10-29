@@ -8,6 +8,7 @@
 
 /* -------------------------------------------- */
 
+
 let video_channel_array = Array.from(
   document.getElementsByClassName("video_channel_name")
 );
@@ -22,35 +23,35 @@ let video_title_array = Array.from(
   document.getElementsByClassName("video_title")
 );
 
-let glass = document.getElementById("search_glass");
-let logo = document.getElementById("logo");
-let search = document.getElementById("search_bar");
+const glass = document.getElementById("search_glass");
+const logo = document.getElementById("logo");
+const search = document.getElementById("search_bar");
 
-let left_container = document.querySelector("#sidebar_left_container");
-let right_container = document.querySelector("#sidebar_right_container");
-let video_container = document.getElementById("video_container");
+const left_container = document.querySelector("#sidebar_left_container");
+const right_container = document.querySelector("#sidebar_right_container");
+const video_container = document.getElementById("video_container");
 
-let bell_li = document.querySelector("#bell_li");
-let burger_li = document.querySelector("#burger_li");
-let camera_li = document.querySelector("#camera_li");
-let dots_li = document.querySelector("#dots_li");
-let profile_butt = document.querySelector("#profile_butt");
+const bell_li = document.querySelector("#bell_li");
+const burger_li = document.querySelector("#burger_li");
+const camera_li = document.querySelector("#camera_li");
+const dots_li = document.querySelector("#dots_li");
+const profile_butt = document.querySelector("#profile_butt");
 
-let sidebar_img = document.getElementsByClassName("side_img");
-let sidebar_right_txt = document.getElementsByClassName("side_text_right");
-let sidebar_txt = document.getElementsByClassName("side_text");
+const sidebar_img = document.getElementsByClassName("side_img");
+const sidebar_right_txt = document.getElementsByClassName("side_text_right");
+const sidebar_txt = document.getElementsByClassName("side_text");
 
-let creator = document.querySelector("#creator");
+const creator = document.querySelector("#creator");
 
-let articles = document.getElementsByTagName("article");
-let article_count = articles.length;
+const articles = document.getElementsByTagName("article");
+const article_count = articles.length;
 
-let GOO_ico = Array.from(document.getElementsByClassName("topbar_ico"));
+const GOO_ico = Array.from(document.getElementsByClassName("topbar_ico"));
 
-let characters_el = [" ", "χ", "ε"];
-let dates_el = ["μέρες", "ώρες", "λεπτά", "μήνες"];
-let characters_en = [" ", "k", "m"];
-let dates_en = ["days", "hours", "minutes", "months"];
+const characters_el = [" ", "χ", "ε"];
+const dates_el = ["μέρες", "ώρες", "λεπτά", "μήνες"];
+const characters_en = [" ", "k", "m"];
+const dates_en = ["days", "hours", "minutes", "months"];
 
 let characters_length_el =
   characters_el[Math.floor(Math.random() * characters_el.length)];
