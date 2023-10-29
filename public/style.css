@@ -473,6 +473,7 @@ nav li {
   position: fixed;
   right: -20rem;
   z-index: 998;
+  display: none;
 }
 
 .sidebar_right_container_show {
@@ -528,22 +529,26 @@ nav li {
 @keyframes menu_right_in {
   0% {
     right: -20rem;
+    display: none;
   }
 
   100% {
     right: 0;
     /*  opacity: 1; */
+    display: grid;
   }
 }
 
 @keyframes menu_right_out {
   0% {
     right: 0;
+    display: grid;
   }
 
   100% {
     right: -20rem;
     /*  opacity: 0; */
+    display: none;
   }
 }
 
