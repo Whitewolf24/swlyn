@@ -115,7 +115,7 @@ if (document.cookie.length === 0) {
 
     else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       invert_d();
-      Cookies.set("theme", "light", {
+      Cookies.set("theme", "dark", {
         expires: 300,
         path: ''
       });
