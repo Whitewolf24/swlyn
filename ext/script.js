@@ -322,6 +322,10 @@ else if (goog) {
 
 /* 3.1 menu animations */
 
+search_glass.addEventListener("click", function (e) {
+  e.preventDefault()
+});
+
 document.querySelector("#burger_butt").addEventListener("click", function () {
   if (hidden == true) {
     left_container.classList.add("sidebar_left_container_show");

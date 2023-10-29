@@ -341,11 +341,11 @@ nav li {
 }
 
 .sidebar_left_container_show {
-  animation: menu_in 0.4s ease forwards;
+  animation: menu_in 0.4s ease-in-out forwards;
 }
 
 .sidebar_left_container_hide {
-  animation: menu_out 0.4s ease forwards;
+  animation: menu_out 0.4s ease-in-out forwards;
 }
 
 #sidebar_left_container li:hover:not(:last-child) {
@@ -384,21 +384,21 @@ nav li {
 }
 
 @keyframes menu_in {
-  from {
+  0% {
     transform: translate(-100%, 0%);
   }
 
-  to {
+  100% {
     transform: translate(0%, 0%);
   }
 }
 
 @keyframes menu_out {
-  from {
+  0% {
     transform: translate(0%, 0%);
   }
 
-  to {
+  100% {
     transform: translate(-100%, 0%);
   }
 }
