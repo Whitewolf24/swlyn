@@ -464,19 +464,19 @@ nav li {
 /* 4.sidebar_right */
 
 #sidebar_right_container {
-  opacity: 0;
+  /*   opacity: 0; */
   position: fixed;
   right: -20rem;
   z-index: 998;
 }
 
 .sidebar_right_container_show {
-  opacity: 0;
+  display: grid;
   animation: menu_right_in 0.4s ease forwards;
 }
 
 .sidebar_right_container_hide {
-  opacity: 1;
+  display: none;
   animation: menu_right_out 1s ease forwards;
 }
 
@@ -527,7 +527,7 @@ nav li {
 
   100% {
     right: 0;
-    opacity: 1;
+    /*  opacity: 1; */
   }
 }
 
@@ -538,7 +538,7 @@ nav li {
 
   100% {
     right: -20rem;
-    opacity: 0;
+    /*  opacity: 0; */
   }
 }
 
