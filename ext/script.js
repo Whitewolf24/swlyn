@@ -106,30 +106,35 @@ if (document.cookie.length === 0) {
 
   window.addEventListener("load", (event) => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      invert_l();
+      //invert_l();
       Cookies.set("theme", "light", {
         expires: 300,
         path: ''
       });
+
+      Cookies.set("lang", "gr", {
+        expires: 300,
+        path: ''
+      });
+
+      window.location.reload();
     }
 
     else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      invert_d();
+      //invert_d();
       Cookies.set("theme", "dark", {
         expires: 300,
         path: ''
       });
+
+      Cookies.set("lang", "gr", {
+        expires: 300,
+        path: ''
+      });
+
+      window.location.reload();
     }
   });
-
-
-  Cookies.set("lang", "gr", {
-    expires: 300,
-    path: ''
-  });
-
-  window.location.reload();
-
 }
 
 
@@ -278,7 +283,7 @@ else if (goog) {
   nav.style.right = "0.5rem";
   nav.style.position = "relative !important";
   icos.style.marginLeft = "-2rem !important";
-  video_container.style.left = "38vw !important";
+  video_container.style.left = "37.5vw !important";
   bell_butt.style.marginInline = "0.1rem !important";
   bell_butt.style.width = "19px !important";
   camera_butt.style.marginLeft = "0.7rem !important";
