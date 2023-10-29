@@ -147,7 +147,7 @@ else if (document.cookie.length !== 0) {
       invert_l();
     }
 
-    else if (theme == "dark") {
+    else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       invert_d();
     }
 
@@ -401,7 +401,7 @@ burger_li.addEventListener("mouseenter", function () {
       document.querySelector("#burger_butt").style.webkitFilter =
         "invert() brightness(0.5)";
     }
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.querySelector("#burger_butt").style.opacity = "0.4";
   }
 });
@@ -410,7 +410,7 @@ burger_li.addEventListener("mouseleave", function () {
   if (theme == "light") {
     document.querySelector("#burger_butt").style.filter =
       "invert() brightness(0)";
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.querySelector("#burger_butt").style.opacity = "1";
   }
 });
@@ -446,7 +446,7 @@ camera_li.addEventListener("mouseenter", function () {
       document.querySelector("#camera_butt").style.webkitFilter =
         "invert() brightness(0.5)";
     }
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.querySelector("#camera_butt").style.opacity = "0.4";
   }
 });
@@ -455,7 +455,7 @@ camera_li.addEventListener("mouseleave", function () {
   if (theme == "light") {
     document.querySelector("#camera_butt").style.filter =
       "invert() brightness(0)";
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.querySelector("#camera_butt").style.opacity = "1";
   }
 });
@@ -471,7 +471,7 @@ dots_li.addEventListener("mouseenter", function () {
       document.querySelector("#dots_butt").style.webkitFilter =
         "invert() brightness(0.5)";
     }
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.querySelector("#dots_butt").style.opacity = "0.4";
   }
 });
@@ -480,7 +480,7 @@ dots_li.addEventListener("mouseleave", function () {
   if (theme == "light") {
     document.querySelector("#dots_butt").style.filter =
       "invert() brightness(0)";
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.querySelector("#dots_butt").style.opacity = "1";
   }
 });
@@ -496,7 +496,7 @@ bell_li.addEventListener("mouseenter", function () {
       document.querySelector("#bell_butt").style.webkitFilter =
         "invert() brightness(0.5)";
     }
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.querySelector("#bell_butt").style.opacity = "0.4";
   }
 });
@@ -519,7 +519,7 @@ document.querySelector("#profile_li").addEventListener("mouseenter", function ()
     } else if (goog) {
       profile_butt.style.webkitFilter = "invert() brightness(0.5)";
     }
-  } else if (theme == "dark") {
+  } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     profile_butt.style.opacity = "0.4";
   }
 });
@@ -529,7 +529,7 @@ document
   .addEventListener("mouseleave", function () {
     if (theme == "light") {
       profile_butt.style.filter = "invert() brightness(0)";
-    } else if (theme == "dark") {
+    } else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       profile_butt.style.opacity = "1";
     }
   });
