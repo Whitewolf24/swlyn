@@ -711,25 +711,25 @@ nav li {
 
 /*  6.media */
 
-/*@media only screen and (max-width: 1184px) and (min-width: 890px) {
+@media only screen and (min-width: 890px) {
   #video_container {
-    left: 7rem;
+    left: 9vw !important;
   }
 }
 
 @media only screen and (max-width: 890px) and (min-width: 720px) {
   #video_container {
-    left: 12rem;
-    width: 76vw;
+    left: 15vw !important;
+    width: 76vw !important;
   }
 }
 
- @media only screen and (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   #video_container {
-    left: 17vw;
-    width: 76vw;
+    left: 35vw !important;
+    width: 76vw !important;
   }
-} */
+}
 
 
 @media only screen and (max-width: 990px) and (min-width: 800px) {

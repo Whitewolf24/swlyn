@@ -209,13 +209,13 @@ if (firef) {
 
     if (current_width >= 1087) {
       video_container.style.marginLeft = "0.5rem";
-      video_container.style.left = "14vw";
+      //video_container.style.left = "14vw";
       //video_container.style.width = "93vw";
     }
 
     if (current_width >= 724 && !(current_width >= 1087)) {
       video_container.style.marginLeft = "0.5rem";
-      video_container.style.left = "24vw";
+      //video_container.style.left = "24vw";
       //video_container.style.width = "93vw";
     }
 
@@ -223,8 +223,8 @@ if (firef) {
       video_container.style.marginLeft = "0.1rem";
       // video_container.style.width = "93vw";
       if (current_width <= 720) {
-        video_container.style.width = "76vw";
-        video_container.style.left = "35vw";
+        video_container.style.width = "82vw";
+        //video_container.style.left = "35vw";
       }
     }
 
