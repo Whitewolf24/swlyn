@@ -1880,7 +1880,7 @@
 
     /* /////// */
 
-    @media only screen and (max-width: 500px) {
+    /*  @media only screen and (max-width: 500px) {
         #search_bar {
             display: none;
         }
@@ -1928,91 +1928,31 @@
             margin-left: 0.2rem;
         }
     }
+ */
 
-    @media (hover: none) {
-        @supports (-moz-appearance: none) {
-            html {
-                bottom: 3.5rem !important;
-                position: relative !important;
-                right: 4.2rem !important;
-                transform: scale(0.9) !important;
-            }
-
-            header {
-                width: 125% !important;
-            }
-
-            #icos {
-                margin-left: -1.2rem !important;
-            }
-
-            nav {
-                margin-top: 1rem !important;
-            }
-
-            #bell_butt {
-                margin-inline: 0.1rem !important;
-                width: 19px !important;
-            }
-
-            #camera_butt {
-                margin-left: 0.4rem !important;
-                margin-right: 0.2rem !important;
-                width: 22px !important;
-            }
-
-            #creator {
-                margin-left: 0.5rem !important;
-            }
-
-            #sidebar_left {
-                margin-left: 2.5rem !important;
-            }
-
-            #sidebar_right_container {
-                margin-right: -8rem !important;
-            }
-
-            #search_butt {
-                margin-right: 0.1rem !important;
-            }
-
-            .video_container {
-                left: 37vw !important;
-            }
-
-            .video_boxes {
-                margin-bottom: 2.5rem !important;
-            }
-
-            #profile_li {
-                margin-left: 0.5rem;
-            }
+    @media (prefers-color-scheme: dark) {
+        #burger_butt {
+            filter: invert();
         }
 
-        @media (prefers-color-scheme: dark) {
-            #burger_butt {
-                filter: invert();
-            }
+        #bell_butt {
+            filter: invert();
+        }
 
-            #bell_butt {
-                filter: invert();
-            }
+        #camera_butt {
+            filter: invert();
+        }
 
-            #camera_butt {
-                filter: invert();
-            }
+        #search_butt {
+            filter: invert();
+            width: 19px;
+        }
 
-            #search_butt {
-                filter: invert();
-                width: 19px;
-            }
+        #profile_butt {
+            filter: invert();
+        }
 
-            #profile_butt {
-                filter: invert();
-            }
-
-            /*             #search_butt {
+        /*             #search_butt {
                 filter: invert();
             }
 
@@ -2052,17 +1992,16 @@
                 filter: invert();
             } */
 
-            .side_img {
-                filter: invert();
-            }
+        .side_img {
+            filter: invert();
+        }
 
-            #dots_butt {
-                filter: invert();
-            }
+        #dots_butt {
+            filter: invert();
+        }
 
-            #profil_butt {
-                filter: invert();
-            }
+        #profil_butt {
+            filter: invert();
         }
     }
 
@@ -2088,14 +2027,53 @@
         #search_glass {
             margin-left: -0.3rem !important;
             width: 19px !important;
+            height: auto;
         }
 
         #camera_butt {
             width: 22px !important;
         }
 
+        #search_bar {
+            display: none;
+        }
+
+        /*   #search_form {
+            width: 3vw;
+        } 
+
+        #search_butt {
+            margin-left: 1vw;
+            height: auto;
+        }
+
+        #camera_butt,
+        #bell_butt {
+            width: 20px;
+        }
+
+        #bell_butt {
+            width: 18px;
+        }*/
+
+        #dots_butt,
+        #profile_butt {
+            width: 25px;
+        }
+
+        #camera_li {
+            margin-left: 5vw;
+            margin-top: 5%;
+        }
+
+        #dots_li {
+            margin-left: clamp(-0.6vh, 1rem, 0.4vw);
+            margin-right: -0.5rem;
+        }
+
         #profile_li {
-            margin-left: 0.5rem;
+            margin-right: clamp(2vh, 1rem, 2vw);
+            margin-left: 0.6rem;
         }
 
         @keyframes menu_right_in {
@@ -2408,6 +2386,70 @@
 
                 }
             }
+        }
+
+    }
+
+    @media (hover: none) {
+        @supports (-moz-appearance: none) {
+            html {
+                bottom: 3.5rem !important;
+                position: relative !important;
+                right: 4.2rem !important;
+                transform: scale(0.9) !important;
+            }
+
+            header {
+                width: 125% !important;
+            }
+
+            #icos {
+                margin-left: -1.2rem !important;
+            }
+
+            nav {
+                margin-top: 1rem !important;
+                margin-left: 3.4rem !important;
+            }
+        }
+
+        #bell_butt {
+            margin-inline: 0.1rem !important;
+            width: 19px !important;
+        }
+
+        #camera_butt {
+            margin-left: 0.4rem !important;
+            margin-right: 0.2rem !important;
+            width: 22px !important;
+        }
+
+        #creator {
+            margin-left: 0.5rem !important;
+        }
+
+        #sidebar_left {
+            margin-left: 2.5rem !important;
+        }
+
+        #sidebar_right_container {
+            margin-right: -8rem !important;
+        }
+
+        #search_butt {
+            margin-right: 0.1rem !important;
+        }
+
+        .video_container {
+            left: 37vw !important;
+        }
+
+        .video_boxes {
+            margin-bottom: 2.5rem !important;
+        }
+
+        #profile_li {
+            margin-left: 0.5rem;
         }
     }
 </style>
