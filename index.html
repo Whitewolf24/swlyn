@@ -48,7 +48,7 @@
                                 tabindex=0 id="search_glass" class="transparent_pic"></button>
                     </form>
                 </li>
-                <div id="icos">
+                <div id="icos" style="display: contents;">
                     <li data-tip="Δημιουργία Βιντεο" draggable="false" id="camera_li" tabindex=-1>
                         <a href="#" draggable="false" target="_self" tabindex=0><img src="public\img\camera.png"
                                 tabindex=-1 alt="Δημιουργία Βίντεο" aria-label="Δημιουργία Βιντεο" draggable="false"
@@ -2092,7 +2092,7 @@
         }
 
         #search_bar {
-            display: none;
+            display: none !important;
         }
 
         #search_form {
@@ -2142,14 +2142,14 @@
 
     /* /////// */
 
-    @media only screen and (max-width: 520px) and (min-width: 500px) {
+    @media only screen and (max-width: 520px) and (min-width: 420px) {
         header {
             grid-template-rows: 3.5rem;
             padding-top: 1rem;
         }
 
         #search_bar {
-            display: none;
+            display: none !important;
         }
 
         #search_form {
