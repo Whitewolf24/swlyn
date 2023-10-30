@@ -40,7 +40,7 @@
                         </a>
                     </h1>
                 </div>
-                <li id="icos">
+                <li>
                     <form id="search_form"> <input type="search" placeholder="Αναζήτηση" aria-label=" Φόρμα Αναζήτησης"
                             id="search_bar">
                         <button draggable="false" tabindex=-1 id="search_butt" target="_self"><img
@@ -48,26 +48,29 @@
                                 tabindex=0 id="search_glass" class="transparent_pic"></button>
                     </form>
                 </li>
-                <li data-tip="Δημιουργία Βιντεο" draggable="false" id="camera_li" tabindex=-1>
-                    <a href="#" draggable="false" target="_self" tabindex=0><img src="public\img\camera.png" tabindex=-1
-                            alt="Δημιουργία Βίντεο" aria-label="Δημιουργία Βιντεο" draggable="false" id="camera_butt"
-                            class="transparent_pic camera_hover topbar_ico"> </a>
-                </li>
+                <div id="icos">
+                    <li data-tip="Δημιουργία Βιντεο" draggable="false" id="camera_li" tabindex=-1>
+                        <a href="#" draggable="false" target="_self" tabindex=0><img src="public\img\camera.png"
+                                tabindex=-1 alt="Δημιουργία Βίντεο" aria-label="Δημιουργία Βιντεο" draggable="false"
+                                id="camera_butt" class="transparent_pic camera_hover topbar_ico"> </a>
+                    </li>
 
-                <li data-tip="Εφαρμογές" draggable="false" id="dots_li" tabindex=-1><a href="#" draggable="false"
-                        target="_self" tabindex=0><img src="public\img\apps.png" tabindex=-1 alt="Εφαρμογές"
-                            aria-label="Εφαρμογές" draggable="false" id="dots_butt" class="transparent_pic topbar_ico">
-                    </a> </li>
-                <li data-tip="Ειδο/σεις" draggable="false" id="bell_li" tabindex=-1><a href="#" target="_self"
-                        tabindex=0>
-                        <img src="public\img\bell.png" tabindex=-1 alt="Ειδοποιήσεις" aria-label="Ειδοποιήσεις"
-                            draggable="false" id="bell_butt" class="transparent_pic topbar_ico"></a>
-                </li>
+                    <li data-tip="Εφαρμογές" draggable="false" id="dots_li" tabindex=-1><a href="#" draggable="false"
+                            target="_self" tabindex=0><img src="public\img\apps.png" tabindex=-1 alt="Εφαρμογές"
+                                aria-label="Εφαρμογές" draggable="false" id="dots_butt"
+                                class="transparent_pic topbar_ico">
+                        </a> </li>
+                    <li data-tip="Ειδο/σεις" draggable="false" id="bell_li" tabindex=-1><a href="#" target="_self"
+                            tabindex=0>
+                            <img src="public\img\bell.png" tabindex=-1 alt="Ειδοποιήσεις" aria-label="Ειδοποιήσεις"
+                                draggable="false" id="bell_butt" class="transparent_pic topbar_ico"></a>
+                    </li>
 
-                <li draggable="false" id="profile_li" tabindex=-1> <img src="public\img\profile.png" tabindex=0
-                        alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
-                        class="transparent_pic topbar_ico" style="cursor: pointer;">
-                </li>
+                    <li draggable="false" id="profile_li" tabindex=-1> <img src="public\img\profile.png" tabindex=0
+                            alt="Προφίλ" aria-label="Προφίλ" draggable="false" id="profile_butt"
+                            class="transparent_pic topbar_ico" style="cursor: pointer;">
+                    </li>
+                </div>
             </ul>
         </nav>
     </header>
@@ -2321,7 +2324,7 @@
         } */
 
 
-    @media screen and (max-width:420px) and (max-height:760px) {
+    @media screen and (max-width:420px) and (max-height:915px) {
 
         /*  @supports not (-moz-appearance: none) { */
         nav {
@@ -2330,7 +2333,7 @@
         }
 
         #icos {
-            margin-left: -2rem !important;
+            right: 3rem !important;
         }
 
         .video_container {
