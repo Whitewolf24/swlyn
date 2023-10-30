@@ -153,6 +153,9 @@
     <!--  -->
     <main id="video_container">
         <section role="main" id="main_section">
+            <div id="rip"
+                style="z-index: 9999; display: none; background-color: white; color: red; align-content: center; justify-content: center; text-align: center;">
+                Browser Incompatible</div>
             <!--  -->
             <article class="video_boxes">
                 <ul>
@@ -2476,6 +2479,12 @@
                 right: 4.5rem;
                 position: relative;
             }
+        }
+
+        #rip {
+            display: flex;
+            margin: 0 auto;
+            font-size: 5rem;
         }
     }
 </style>
