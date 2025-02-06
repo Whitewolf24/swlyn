@@ -278,7 +278,7 @@
     }
 
     #camera_butt {
-        height: auto;
+        height: 1.25rem;
         width: clamp(3vh, 1.5rem, 4vw);
     }
 
@@ -319,8 +319,8 @@
     }
 
     #bell_butt {
-        height: auto;
-        width: clamp(2.8vh, 1.35rem, 3.8vw);
+        height: 1.3rem;
+        width: clamp(2.6vh, 1.15rem, 3.6vw);
     }
 
     /* ///// */
@@ -359,8 +359,8 @@
         animation: menu_out 0.4s ease-in-out forwards;
     }
 
-    #sidebar_left_container li:hover:not(:last-child) {
-        filter: invert(0.45) brightness(0.5);
+    #sidebar_left_container li:hover {
+        filter: invert(0.4) brightness(0.9);;
     }
 
     #sidebar_left_container img {
@@ -384,15 +384,21 @@
         margin-top: 1rem;
     }
 
-    #sidebar_left_container ul {
-        display: grid;
-        grid-template-rows: repeat(7, 2.5rem);
-        /* space between icons */
-        grid-template-areas:
-            "explore" "subs"
-            "lib" "history" "myvids" "later"
-            "liked " "creator";
-    }
+ #sidebar_left_container ul    #sidebar_left_container ul {
+    display: grid;
+    grid-template-rows:  repeat(7, 2.5rem) 0.5rem 0.5rem;
+    /* space between icons */
+    grid-template-areas:
+    "explore"
+    "subs"
+    "lib"
+    "history"
+    "myvids"
+    "later"
+    "liked"
+    "divide"  
+    "creator";
+}
 
     @keyframes menu_in {
         0% {
@@ -440,27 +446,37 @@
         grid-area: later;
     }
 
-    #liked_li {
+    #like_li {
         grid-area: liked;
+        height: 2.25rem;
+    }
+
+    #line {
+        border: none;
+        border-top: 1px solid rgb(59, 59, 59);
+        grid-area: divide;
+        margin-inline:0;
+        height: 1rem;
+        width: 100%;
     }
 
     #creator_li {
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        cursor: default;
+        cursor:default;
         grid-area: creator;
-        margin-top: 0.5rem;
+        height: 1rem;
     }
 
     /* ///// */
 
     #creator {
-        cursor: default;
-        font-size: 0.6rem;
+        cursor:pointer;
+       font-size: 1rem;
         font-style: italic;
         margin-top: 1rem;
         margin-left: 0.2rem;
         text-align: center;
     }
+    
 
     /* -------------------------------------------- */
 
@@ -485,7 +501,7 @@
     }
 
     #sidebar_right_container li:hover:not(.line_right) {
-        filter: invert(0.45) brightness(0.5);
+        filter: invert(0.45) brightness(0.6);
     }
 
     #sidebar_right_container img {
@@ -1828,7 +1844,7 @@
     }
 
     #camera_butt {
-        height: auto;
+        height: 1.25rem;
         width: clamp(3vh, 1.5rem, 4vw);
     }
 
@@ -1869,8 +1885,8 @@
     }
 
     #bell_butt {
-        height: auto;
-        width: clamp(2.8vh, 1.35rem, 3.8vw);
+        height: 1.3rem;
+        width: clamp(2.6vh, 1.15rem, 3.6vw);
     }
 
     /* ///// */
@@ -1909,8 +1925,8 @@
         animation: menu_out 0.4s ease-in-out forwards;
     }
 
-    #sidebar_left_container li:hover:not(:last-child) {
-        filter: invert(0.45) brightness(0.5);
+    #sidebar_left_container li:hover{
+        filter: invert(0.4) brightness(0.9);
     }
 
     #sidebar_left_container img {
@@ -1936,12 +1952,18 @@
 
     #sidebar_left_container ul {
         display: grid;
-        grid-template-rows: repeat(7, 2.5rem);
+        grid-template-rows:  repeat(7, 2.5rem) 0.5rem 0.5rem;
         /* space between icons */
         grid-template-areas:
-            "explore" "subs"
-            "lib" "history" "myvids" "later"
-            "liked " "creator";
+        "explore"
+        "subs"
+        "lib"
+        "history"
+        "myvids"
+        "later"
+        "liked"
+        "divide"  
+        "creator";
     }
 
     @keyframes menu_in {
@@ -1990,24 +2012,33 @@
         grid-area: later;
     }
 
-    #liked_li {
+    #like_li {
         grid-area: liked;
+        height: 2.25rem;
+    }
+
+    #line {
+        border: none;
+        border-top: 1px solid rgb(59, 59, 59);
+        grid-area: divide;
+        margin-inline:0;
+        height: 1rem;
+        width: 100%;
     }
 
     #creator_li {
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        cursor: default;
+          cursor:default;
         grid-area: creator;
-        margin-top: 0.5rem;
+        height: 1rem;
     }
 
     /* ///// */
 
     #creator {
-        cursor: default;
-        font-size: 0.6rem;
+       cursor: pointer;
+        font-size: 1rem;
         font-style: italic;
-        margin-top: 1rem;
+        padding-top: 1rem;
         margin-left: 0.2rem;
         text-align: center;
     }
@@ -2035,7 +2066,7 @@
     }
 
     #sidebar_right_container li:hover:not(.line_right) {
-        filter: invert(0.45) brightness(0.5);
+        filter: invert(0.4) brightness(0.9);;
     }
 
     #sidebar_right_container img {
@@ -3192,6 +3223,25 @@
     #camera_butt {
         width: 22px !important;
     }
+}
+
+.cookie-info {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.cookie-message {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* } */

@@ -8,7 +8,7 @@
 
 /* -------------------------------------------- */
 
-
+document.addEventListener("DOMContentLoaded", function () {
 let video_channel_array = Array.from(
   document.getElementsByClassName("video_channel_name")
 );
@@ -97,93 +97,25 @@ else if (navigator.userAgent.indexOf("Firefox") != -1) {
 /* -------------------------------------------- */
 
 /* 1. cookies */
-/* set and call cookies */
-let lang = Cookies.get("lang");
+
+let lang =  Cookies.get("lang");
 let theme = Cookies.get("theme");
 
-let load = 1;
-
-if (document.cookie.length === 0) {
-
-  window.addEventListener("load", (event) => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      //invert_l();
-      Cookies.set("theme", "light", {
-        expires: 300,
-        path: ''
-      });
-
-      Cookies.set("lang", "gr", {
-        expires: 300,
-        path: ''
-      });
-
-      window.location.reload();
-    }
-
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      //invert_d();
-      Cookies.set("theme", "dark", {
-        expires: 300,
-        path: ''
-      });
-
-      Cookies.set("lang", "gr", {
-        expires: 300,
-        path: ''
-      });
-
-      window.location.reload();
-    }
-  });
+Cookies.set("testCookie", "testValue", { expires: 1, path: "/" });
+if (!theme || !lang) {
+  theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  lang = navigator.language.startsWith("en") ? "eng" : "gr"; 
+  console.log(theme);
+  console.log(lang);
+  Cookies.set("theme", theme, { expires: 300, path: "/",sameSite: "None", secure: false });
+  Cookies.set("lang", lang, { expires: 300, path: "/",sameSite: "None", secure: false });
+  theme === "light" ? invert_l() : invert_d();
+  lang === "eng" ? speak_eng() : speak_gr();
+  reload_();
+} else {
+  theme === "light" ? invert_l() : invert_d();
+  lang === "eng" ? speak_eng() : speak_gr();
 }
-
-
-else if (document.cookie.length !== 0) {
-
-  if (theme !== 0) {
-
-    if (theme == "light") {
-      invert_l();
-    }
-
-    else if (theme == "dark" || window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      invert_d();
-    }
-
-  }
-
-
-  if (lang !== 0) {
-
-    if (lang == "eng") {
-
-      document.documentElement.style.setProperty("--time_mleft", "12.95rem");
-      document.documentElement.style.setProperty("--time_mtop", "7.6rem");
-      logo.style.width = "65.5%";
-      video_channel_array.forEach(fontsize_general_en);
-      video_meta_array.forEach(fontsize_general_en);
-      video_meta_array.forEach(randomizer_meta_eng);
-      video_title_array.forEach(fontsize_titles_en);
-      speak_eng();
-    }
-
-    else if (lang == "gr") {
-
-      document.documentElement.style.setProperty("--time_mleft", "12.4rem");
-      document.documentElement.style.setProperty("--time_mtop", "7.2rem");
-      logo.style.width = "69%";
-      video_channel_array.forEach(fontsize_general);
-      video_meta_array.forEach(fontsize_general);
-      video_meta_array.forEach(randomizer_meta_el);
-      video_title_array.forEach(fontsize_titles);
-      speak_gr();
-    }
-
-  }
-
-}
-
 /* -------------------------------------------- */
 
 /* 2. browsers */
@@ -436,7 +368,7 @@ profile_butt.addEventListener("click", function () {
 });
 
 /* ///// */
-
+/*
 camera_li.addEventListener("mouseenter", function () {
   if (theme == "light") {
     if (firef) {
@@ -459,8 +391,6 @@ camera_li.addEventListener("mouseleave", function () {
     document.querySelector("#camera_butt").style.opacity = "1";
   }
 });
-
-/* ///// */
 
 dots_li.addEventListener("mouseenter", function () {
   if (theme == "light") {
@@ -485,8 +415,6 @@ dots_li.addEventListener("mouseleave", function () {
   }
 });
 
-/* ///// */
-
 bell_li.addEventListener("mouseenter", function () {
   if (theme == "light") {
     if (firef) {
@@ -501,14 +429,14 @@ bell_li.addEventListener("mouseenter", function () {
   }
 });
 
-bell_li.addEventListener("mouseleave", function () {
+ bell_li.addEventListener("mouseleave", function () {
   if (theme == "light") {
     document.querySelector("#bell_butt").style.filter =
       "invert() brightness(0)";
   } else if ((theme = "dark")) {
     document.querySelector("#bell_butt").style.opacity = "1";
-  }
-});
+  } 
+});*/
 
 /* ///// */
 
@@ -541,52 +469,48 @@ document.querySelector("#search_butt").addEventListener("click", function (event
 /* ///// */
 /* 3.3. lang buttons  */
 
-document.querySelector("#eng_txt").addEventListener("click", function () {
-  if (lang == "gr") {
+document.querySelector("#dark_li")?.addEventListener("click", function () {
+  if (Cookies.get("theme") !== "dark") {
+    Cookies.set("theme", "dark", { expires: 300, path: "/", secure: false });
+    invert_d();
+    reload_();
+  }
+});
+
+document.querySelector("#light_li")?.addEventListener("click", function () {
+  if (Cookies.get("theme") !== "light") {
+    Cookies.set("theme", "light", { expires: 300, path: "/", secure: false });
+    invert_l();
+    reload_();
+  }
+});
+
+document.querySelector("#eng_li")?.addEventListener("click", function () {
+  if (Cookies.get("lang") !== "eng") {
+    Cookies.set("lang", "eng", { expires: 300, path: "/", secure: false });
     speak_eng();
-    window.location.reload();
+    reload_();
   }
 });
 
-document.querySelector("#gr_txt").addEventListener("click", function () {
-  if (lang == "eng") {
+document.querySelector("#el_li")?.addEventListener("click", function () {
+  if (Cookies.get("lang") !== "gr") {
+    Cookies.set("lang", "gr", { expires: 300, path: "/", secure: false });
     speak_gr();
-    window.location.reload();
+    reload_();
   }
 });
 
-/* ///// */
-/* 3.3. theme buttons  */
 
-document.querySelector("#dark_butt").addEventListener("click", function () {
-  if (theme == "light") {
-    invert_d();
+function reload_() {
+  if (!sessionStorage.getItem("reloaded")) {
+    sessionStorage.setItem("reloaded", "true");
     window.location.reload();
   }
-});
-
-document.querySelector("#dark_txt").addEventListener("click", function () {
-  if (theme == "light") {
-    invert_d();
-    window.location.reload();
+  else {
+    sessionStorage.removeItem("reloaded"); 
   }
-});
-
-/* ///// */
-
-document.querySelector("#light_butt").addEventListener("click", function () {
-  if ((theme == "dark")) {
-    invert_l();
-    window.location.reload();
-  }
-});
-
-document.querySelector("#light_txt").addEventListener("click", function () {
-  if (theme = "dark") {
-    invert_l();
-    window.location.reload();
-  }
-});
+}
 
 
 /* -------------------------------------------- */
@@ -886,10 +810,7 @@ function invert_d() {
   video_meta_array.forEach(meta_switch);
   video_title_array.forEach(meta_switch);
 
-  Cookies.set("theme", "dark", {
-    expires: 300,
-    path: ''
-  });
+  document.cookie = "theme=dark; max-age=" + 300 * 24 * 60 * 60 + "; path=/";
 }
 
 /* ///// */
@@ -929,10 +850,7 @@ function invert_l() {
   video_meta_array.forEach(meta_switch_del);
   video_title_array.forEach(meta_switch_del);
 
-  Cookies.set("theme", "light", {
-    expires: 300,
-    path: ''
-  });
+  document.cookie = "theme=light; max-age=" + 300 * 24 * 60 * 60 + "; path=/";
 }
 
 /* ///// */
@@ -969,7 +887,7 @@ function speak_gr() {
   gr_txt.style.right = "3.1rem";
   light_txt.style.right = "3.2rem";
 
-  search.setAttribute("placeholder", "Αναζήτηση");
+  search.setAttribute("placeholder", "Αναζήτηση... (placeholder, μη λειτουργικό)");
 
   bell_li.dataset.tip = "Ειδο/σεις";
   burger_li.dataset.tip = "Μενού";
@@ -1005,10 +923,8 @@ function speak_gr() {
   sidebar_right_txt[4].innerHTML = `Ελληνικά`;
   sidebar_right_txt[5].innerHTML = `Αγγλικά`;
 
-  Cookies.set("lang", "gr", {
-    expires: 300,
-    path: ''
-  });
+  document.querySelector('.cookie-message').innerHTML = 'Χρησιμοποιούμε cookies απαραίτητα για την διαμόρφωση της σελίδας.';
+  document.cookie = "lang=gr; max-age=" + 300 * 24 * 60 * 60 + "; path=/";
 }
 
 function switch_title_gr(item) {
@@ -1045,7 +961,7 @@ function speak_eng() {
   burger_li.dataset.tip = "Menu";
   camera_li.dataset.tip = "Create";
   dots_li.dataset.tip = "Apps";
-  search.setAttribute("placeholder", "Search");
+  search.setAttribute("placeholder", "Search... (placeholder, not functional)");
 
   document.documentElement.style.setProperty("--tip_height_camera", "16px");
   document.documentElement.style.setProperty("--tip_mtop_camera", "2.65rem");
@@ -1077,10 +993,9 @@ function speak_eng() {
   sidebar_right_txt[4].innerHTML = `Greek`;
   sidebar_right_txt[5].innerHTML = `English`;
 
-  Cookies.set("lang", "eng", {
-    expires: 300,
-    path: ''
-  });
+  document.querySelector('.cookie-message').innerHTML = 'We use cookies essential for the layout of the page.';
+
+  document.cookie = "lang=eng; max-age=" + 300 * 24 * 60 * 60 + "; path=/";
 }
 
 function switch_title_eng(item) {
@@ -1093,6 +1008,38 @@ function switch_channel_eng(item) {
 
 
 
+setTimeout(function () {
+  document.getElementById("cookie-info").style.display = "block"; // Show the cookie info
+  document.getElementById("creator").style.display = "block"; // Show the creator
+  fadeIn(document.getElementById("cookie-info"), 1000); // Fade-in effect for cookie info
+}, 1000);
 
+setTimeout(function () {
+  fadeOut(document.getElementById("cookie-info"), 800); // Fade-out effect for cookie info
+}, 6000);
+
+// Function to handle fade-in effect
+function fadeIn(element, duration) {
+  element.style.opacity = 0;
+  element.style.transition = `opacity ${duration}ms`;
+  element.style.display = "block"; // Make sure the element is visible
+  setTimeout(function () {
+      element.style.opacity = 1;
+  }, 10);
+}
+
+// Function to handle fade-out effect
+function fadeOut(element, duration) {
+  element.style.opacity = 1;
+  element.style.transition = `opacity ${duration}ms`;
+  setTimeout(function () {
+      element.style.opacity = 0;
+  }, 10);
+  setTimeout(function () {
+      element.style.display = "none"; // Hide the element once it's faded out
+  }, duration);
+}
+
+});
 
 ////////////////////////////////
